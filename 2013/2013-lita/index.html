@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>My #HuntLibrary: Building new things despite uncertainty and risk</title>
+
+		<meta name="author" content="Bret Davidson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<style>
+
+				img {
+					border: 1px solid LightGrey !important;
+					max-height: 90% !important;
+					max-width: 90% !important;
+				}
+
+				h3 + img {
+	                max-height: 90% !important;
+	                max-width: 90% !important;
+				}
+
+				h2 + img {
+	                max-height: 85% !important;
+	                max-width: 85% !important;
+				}
+
+				img.noborder {
+					border: none !important;
+					box-shadow: none !important;
+	                /*max-height: 85% !important;
+	                max-width: 85% !important;*/
+				}
+
+				/* PDF */
+				img, h3 + img, h2 + img, img.noborder {
+						max-height: 75% !important;
+						max-width: 75% !important;
+				}
+		</style>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- Intro -->
+				<section>
+					<h2>My #HuntLibrary</h2>
+                    <h4>building new things despite uncertainty and risk</h4>
+                    <br>
+					<p style="text-algin: left"><small>
+                        Bret Davidson
+                        <br>
+                        NCSU Libraries
+                    </small></p>
+				</section>
+
+				<section>
+					<h2>Who are we?</h2>
+					<ul>
+						<li class="fragment">NCSU Digital Library Initiatives </li>
+						<li class="fragment">Digital Services Development</li>
+						<li class="fragment">Librarian Developers</li>
+						<li class="fragment">25+ Applications</li>
+						<li class="fragment"><a href="http://go.ncsu.edu/dli">go.ncsu.edu/dli</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li class="fragment">My #HuntLibrary</li>
+						<li class="fragment">Work Practices</li>
+						<li class="fragment">Risk in MHL</li>
+					</ul>
+				</section>
+
+				<!-- Project Need -->
+				<section>
+					<h2>James B. Hunt, Jr. Library</h2>
+					<h3>Opened January 2013</h3>
+					<img src="img/west_side_hunt_at_night.jpg">
+				</section>
+
+				<section>
+					<img src="img/MHL-collab.jpg">
+				</section>
+
+				<section>
+					<img src="img/MHL-large-scale-viz.jpg">
+				</section>
+
+				<section>
+					<img src="img/MHL-game-lab.jpg">
+				</section>
+
+                <section>
+                    <img src="img/main_floor.png">
+                </section>
+
+                <section>
+                    <a href="http://lib.ncsu.edu/huntlibrary">lib.ncsu.edu/huntlibrary</a>
+                </section>
+
+				<!-- Project Vision -->
+				<section>
+					<h2>goals</h2>
+				</section>
+
+				<section>
+					<h3>increase engagement</h3>
+                    <img src="img/dhhill.png">
+				</section>
+
+				<section>
+					<h3>contribution mechanism</h3>
+                    <img src="img/MHL-bw-hunt-clouds.png">
+				</section>
+
+				<section>
+					<h3>explore new technologies</h3>
+                    <img src="img/micro_close.png">
+				</section>
+
+                <section>
+                    <h3>My #HuntLibary/lentil</h3>
+                    <h4><a href="http://go.ncsu.edu/myhunt">go.ncsu.edu/myhunt</a></h4>
+                    <img src="img/MHL-recent-screenshot.png">
+                </section>
+
+				<section>
+					<h2>enabling features</h2>
+				</section>
+
+				<section>
+                	<h3>responsive</h3>
+                	<img src="img/MHL-mobile-screenshot.png">
+                </section>
+
+                <section>
+					<h2>RESPONSIVE</h2>
+					<img src="img/MHL_immersion_1.jpg">
+				</section>
+
+				<section>
+					<h3>battle</h3>
+					<img src="img/battle_screenshot.png">
+				</section>
+
+				<section>
+					<h3>social</h3>
+					<img src="img/MHL-sharing-like-report.png">
+				</section>
+
+				<section>
+					<h3>curated and popular views</h3>
+					<img src="img/realtime.png">
+				</section>
+
+                <section>
+                    <h3>contributor pages</h3>
+                    <img src="img/contrib.png">
+                </section>
+
+                <section>
+                    <h3>harvesting</h3>
+                    <img src="img/MHL-tagsets.png">
+                </section>
+
+                <section>
+                    <h3>moderation</h3>
+                    <img src="img/MHL-image-moderation.png">
+                </section>
+
+				<!-- Themes -->
+                <section>
+                    <h2>themes</h2>
+                </section>
+
+				<section>
+					<h3>How do students relate to libraries?</h3>
+				</section>
+
+				<!-- Relation -->
+				<section>
+					<h3>Building crowdsourced photographic collections with lentil and Instagram</h3>
+					<a href="https://speakerdeck.com/cazzerson/building-crowdsourced-photographic-collections-with-lentil-and-instagram">speakerdeck.com/cazzerson</a>
+				</section>
+
+				<section>
+                    <h3>How do students relate to us?</h3>
+                    <ul>
+                        <li>(de)centralization (relation)</li>
+                        <li>consumption/creation (direction)</li>
+                        <li>physical/virtual (setting)</li>
+                        <li>individual/community (identity)</li>
+                        <li>present/future (horizon)</li>
+                    </ul>
+                </section>
+
+                <section>
+					<h3>(de)centralization (relation)</h3>
+				</section>
+
+               <!--  <section>
+                	<h3>hashtagging</h3>
+                	<img src="img/dhhill_instagram_images.png">
+                </section> -->
+
+				<section data-transition="none">
+					<h3>social network</h3>
+					<img class="noborder" src="img/1-Instagram.png">
+				</section>
+
+				<section data-transition="none">
+					<h3>authors</h3>
+					<img class="noborder" src="img/2-all_users.png">
+				</section>
+
+				<section data-transition="none">
+					<h3>#huntlibrary authors</h3>
+					<img class="noborder" src="img/3-huntlibrary_users.png">
+				</section>
+
+				<section data-transition="none" >
+					<h3>aggregating peers</h3>
+					<img class="noborder" src="img/4-lentil.png">
+				</section>
+
+				<section data-transition="none">
+					<h3>lentil users</h3>
+					<img class="noborder" src="img/5-lentil_users.png">
+				</section>
+
+				<section data-transition="none" >
+					<h3>services, archives</h3>
+					<img class="noborder" src="img/6-archives.png">
+				</section>
+
+				<section data-transition="none">
+					<h3>indirect participation</h3>
+					<img class="noborder" src="img/7-indirect_use.png">
+				</section>
+
+				<!-- Lifecycle -->
+				<section>
+                	<h3>the life of a lentil image</h3>
+                	<br>
+                	<ol>
+                		<li>metadata of user-tagged Instagram image is harvested via API</li>
+                		<li>image is approved by moderator</li>
+                		<li>image battles, collects "likes" (subjective metadata)</li>
+                		<li>(loop) calculate popularity score</li>
+                		<li>(loop) check for removal from Instagram</li>
+                		<li>image file is harvested and stored in staging area</li>
+                		<li>donor agreement is automatically submitted as a comment</li>
+                		<li>barring author objection, image metadata and file are packaged for (future) external system</li>
+                	</ol>
+                </section>
+
+                <!-- Storytelling -->
+                <section>
+                    <h3>Libraries as Storytelling Platforms</h3>
+                </section>
+
+                <section>
+                    <h3>Engaging the Academic Community: Library as Storytelling Platform</h3>
+                    <a href="http://www.slideshare.net/mikecontrol/library-asstorytellingplatform-nutt-27811658">slideshare.net/mikecontrol</a>
+                </section>
+
+				<section>
+					<h3>Oldenburg's &ldquo;third places"</h3>
+					<p>neutral social sites where conversation is the main activity</p>
+				</section>
+
+                <section>
+                	<img src="img/winners.png">
+                </section>
+
+				<!-- Participation -->
+				<section>
+					<h3>Why did people participate?</h3>
+					<ul>
+						<li>Others to see my picture: 83%</li>
+						<li><span style="color:red">Contribute to NCSU archive: 75%</span></li>
+						<li>Win an iPad Mini: 58%</li>
+						<li>See my pic on a public display: 50%</li>
+						<li>Other: 25%</li>
+					</ul>
+				</section>
+
+				<section>
+                    <h2>How would you feel about your photos being added to an archival collection?</h2>
+                </section>
+
+				<section>
+	                <h2>&ldquo;I would be so excited. For me, I think it would be better than winning an iPad."</h2>
+	            </section>
+
+				<!-- Reactions -->
+				<section>
+                	<img src="img/MHL-donor-agreement-legit.png">
+                </section>
+
+				<section>
+					<img src="img/twitter-archives-nobigdeal.png">
+				</section>
+
+                <section>
+                    <img src="img/dope.png" alt="">
+                </section>
+
+                <!-- Usage -->
+                <section>
+                	<h2>usage</h2>
+                	<br>
+                	<ul>
+                		<li>3000+ images</li>
+                		<li>7700+ "likes"</li>
+                		<li>70,000+ "battles"</li>
+                		<li>37,000+ visits</li>
+                		<li>240,000+ pageviews</li>
+                		<li>1000+ donor agreements</li>
+                		<li>2 objections</li>
+                	</ul>
+                </section>
+
+				<!-- Work Practices -->
+                <section>
+                    <h2>work practices</h2>
+                </section>
+
+                <section>
+                    <h2>brainstorming</h2>
+                    <img src="img/ui.png" alt="">
+                </section>
+
+                <section>
+                    <h2>rapid prototyping</h2>
+                    <img src="img/prototype.png" alt="">
+                </section>
+
+                <section>
+                    <h2>one pager</h2>
+                    <ul>
+                        <li>Summary</li>
+                        <li>Requirements</li>
+                        <li>Features</li>
+                        <li>Out of Scope</li>
+                        <li>Project Team</li>
+                        <li>Schedule</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>out of scope</h2>
+                    <ul>
+                        <li>Images not related to Hunt</li>
+                        <li>Advanced curation tools</li>
+                        <li>Advanced presentation of images</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>project team</h2>
+                    <ul>
+                        <li>Mike Nutt  => product lead</li>
+                        <li>Jason Casden  => project manager</li>
+                        <li>Cory Lown  => developer</li>
+                        <li>Bret Davidson  => developer</li>
+                        <li>Jason Ronallo  => rails expert</li>
+                        <li>Brian Dietz  => special collections</li>
+                        <li>Jennifer Garrett  => visitor experience</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>other partners</h2>
+                    <ul>
+                        <li>Steve Morris => project champion</li>
+                        <li>Will Cross => copyright/legal</li>
+                        <li>David Hiscoe => communications</li>
+                        <li>Todd Kosmerick => archives</li>
+                        <li>Library Admin => contest</li>
+                        <li>Library IT => microtiles</li>
+                        <li>And more...</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>trello</h2>
+                    <img src="img/trello.png" alt="">
+                </section>
+
+                <section>
+                    <h2>peer instruction</h2>
+                </section>
+
+                <section>
+                    <h2>pair programming</h2>
+                </section>
+
+                <section>
+                    <h2>code review</h2>
+                </section>
+
+                <section>
+                    <h2>blameless post-mortem</h2>
+                    <a href="http://go.ncsu.edu/postmortem">go.ncsu.edu/postmortem</a>
+                </section>
+
+                <section>
+                    <h2>questions</h2>
+                    <ul>
+                        <li>What worked well?</li>
+                        <li>What was frustrating?</li>
+                        <li>What were you proud of?</li>
+                        <li>What would you change if you had magical powers?</li>
+                        <li>How did you feel about our estimates and plan?</li>
+                        <li>Were expectations clear?</li>
+                        <li>Did the team work together well?</li>
+                    </ul>
+                </section>
+
+				<!-- Risk -->
+                <section>
+                    <h2>risk</h2>
+                </section>
+
+                <section>
+                    <h3>&ldquo;learn everything, then there is no such thing as sight-reading"</h3>
+                    <p>Brian Bowman</p>
+                </section>
+
+                <section>
+                    <h2>&ldquo;mini moon shots"</h2>
+                    <img src="img/moon.png">
+                </section>
+
+                <section>
+                    <h2>minimum viable product</h2>
+                    <img class="noborder" src="img/mvp.jpg">
+                </section>
+
+                <section>
+                    <h2>risk mitigation in MHL</h2>
+                </section>
+
+                <section>
+                    <h2>timeline</h2>
+                    <img src="img/schedule.jpg" alt="">
+                </section>
+
+                <section>
+                    <h2>new technologies</h2>
+                    <img src="img/outlet.png" alt="">
+                </section>
+
+                <section>
+                    <h2>participation</h2>
+                    <img src="img/participation.png" alt="">
+                </section>
+
+                <section>
+                    <h2>legal issues</h2>
+                    <img src="img/stress.png" alt="">
+                </section>
+
+                <section>
+                    <h2>instagram platform</h2>
+                    <img src="img/insta_face.png" alt="">
+                </section>
+
+                <section>
+                    <h2>risk in MHL</h2>
+                    <ul>
+                        <li>Timeline</li>
+                        <li>New Technologies</li>
+                        <li>Participation</li>
+                        <li>Legal Issues</li>
+                        <li>Instagram Platform</li>
+                    </ul>
+                </section>
+
+                <!-- Summary -->
+                <section>
+                    <h2>closing thoughts</h2>
+                    <ul>
+                        <li class="fragment">scope ruthlessly</li>
+                        <li class="fragment">practice work</li>
+                        <li class="fragment">mitigate risk</li>
+                    </ul>
+                </section>
+
+                <!-- Closing -->
+               <!--  <section>
+                    <img src="img/trying_failure.jpg" alt="">
+                </section>
+
+                <section>
+                    <h3>&ldquo;Well Dude, we just don't know."</h3>
+                    <img src="img/lebowski.jpg" alt="">
+                </section>
+ -->
+                <section>
+                    <h2>credits</h2>
+                    <ul>
+                        <li>Jason Casden</li>
+                        <li>Brian Dietz</li>
+                        <li>Jennifer Garrett</li>
+                        <li>Cory Lown</li>
+                        <li>Mike Nutt</li>
+                        <li>Jason Ronallo</li>
+                        <li>...and many others</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>github.com/NCSU-Libraries/lentil</h3>
+                    <img src="img/MHL-caution-engineers.png" alt="">
+                </section>
+
+				<section>
+					<h4>Thank You!</h4>
+                    <img src="img/never_stop.png" alt="">
+                    <p>bret_davidson@ncsu.edu | http://go.ncsu.edu/myhunt</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

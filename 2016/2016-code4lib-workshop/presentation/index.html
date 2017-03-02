@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>lodash.js workshop</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>lodash.js API Tour</h2>
+            <small>Kevin Beswick | Bret Davidson</small>
+          <h3>NCSU Libraries</h3>
+        </section>
+
+        <section>
+          <h2>Getting the workshop materials</h2>
+          <br />
+          <h4><a href="https://github.com/bretdavidson/lodash_code4lib_workshop_2016">github.com/bretdavidson/lodash_code4lib_workshop_2016</a></h4>
+          <br />
+          <pre><code data-noescape>
+  git clone git@github.com:bretdavidson/lodash_code4lib_workshop_2016
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Agenda</h2>
+          <table>
+            <tr>
+              <td>9:00-9:15</td>
+              <td>Introductions</td>
+            </tr>
+            <tr>
+              <td>9:15-9:45</td>
+              <td>Presentation &amp; Workshop Intro</td>
+            </tr>
+            <tr>
+              <td>9:45-10:00</td>
+              <td>Break</td>
+            </tr>
+            <tr>
+              <td>10:00-12:00</td>
+              <td>Hands-on Workshop</td>
+            </tr>
+          </table>
+        </section>
+
+        <section>
+          <h2>Introductions</h2>
+          <ul>
+            <li>What is your name?</li>
+            <li>Where are you from?</li>
+            <li>Why are you interested in learning about lodash?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why JS?</h2>
+          <ul>
+            <li>Increased focus on client side application development</li>
+            <li>Lingua franca for frontend development</li>
+            <li>Node.js increasingly popular for backend development in JS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>What is lodash.js?</h2>
+          <ul>
+            <li>Modular library containing utility functions for working with arrays, numbers, objects, strings etc.</li>
+            <li>First released in 2012, forked from Underscore.js</li>
+            <li>Current version: 4.5</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Why lodash.js?</h2>
+        </section>
+
+        <section>
+          <h3>Native</h3>
+          <pre><code data-noescape>
+Object.prototype.pick = function(arr) {
+    var _this = this;
+    var obj = {};
+    arr.forEach(function(key){
+        obj[key] = _this[key];
+    });
+    return obj;
+};
+
+var objA = {"name": "colin", "car": "suzuki", "age": 17};
+var objB = objA.pick(['car', 'age']);
+// {"car": "suzuki", "age": 17}
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Lodash</h3>
+          <pre><code data-noescape>
+var objB = _.pick(objA, ['car', 'age']);
+// {"car": "suzuki", "age": 17}
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Other reasons to use Lodash.js</h2>
+          <ul>
+            <li>Improved performance</li>
+            <li>Easier to write and maintain</li>
+            <li>Bridge the gap between ECMA specifications</li>
+            <li>Modular</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Performance</h2>
+          <ul>
+            <li>Performance improvements focus on several key aspects:
+              <ul>
+                <li>Optimizing across all browsers</li>
+                <li>Optimizing for the common case</li>
+                <li>Avoid using native JS methods (build on simple for-loops instead)</li>
+              </ul>
+            </li>
+            <li>Lodash methods generally perform faster than their native equivalents</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="http://jsperf.com/lodash-vs-native3/2">Example</a></h2>
+          <img src="img/lodash-vs-native.png" />
+          <img src="img/lodash-vs-native-results.png" />
+        </section>
+
+        <section>
+          <h2>Lazy Evaluation for Chainable Methods</h2>
+          <ul>
+            <li>Lodash version 3.0 saw the addition of lazy evaluation</li>
+            <li>Evaluate method chain beforehand to figure out minimum number of cycles to get correct result, execute only when needed</li>
+            <li>Results in large performance gains</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a href="http://jsperf.com/lodash-lazy/22">Example</a></h2>
+          <img src="img/lazy-test-code.png" height="250" />
+          <img src="img/lazy-test.png" />
+        </section>
+
+        <section>
+          <img src="img/npm-depended.png" height="500" />
+          <h3>lodash is currently the most depended upon package on NPM</h3>
+        </section>
+
+        <section>
+          <h2>General uses for Lodash.js</h2>
+          <ul>
+            <li>Data Processing</li>
+            <li>Event Management</li>
+            <li>Language normalization</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>What can lodash.js do?</h3>
+          <a href="https://egghead.io/lessons/core-javascript-introduction-to-lodash">Intro</a>
+        </section>
+
+        <section>
+          <h2>More Examples</h2>
+        </section>
+
+        <section>
+          <h3>Loop for N Times</h3>
+          <pre><code data-noescape>
+  // 1. Basic for loop.
+  for(var i = 0; i < 5; i++) {
+      // ....
+  }
+
+  // 2. Using Array's join and split methods
+  Array.apply(null, Array(5)).forEach(function(){
+      // ...
+  });
+
+  // Lodash
+  _.times(5, function(){
+      // ...
+  });
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Loop and return deeply nested property</h3>
+          <pre><code data-noescape>
+  // Fetch the name of the first pet from each owner
+  var ownerArr = [{
+      "owner": "Colin",
+      "pets": [{"name":"dog1"}, {"name": "dog2"}]
+  }, {
+      "owner": "John",
+      "pets": [{"name":"dog3"}, {"name": "dog4"}]
+  }];
+
+  // Array's map method.
+  ownerArr.map(function(owner){
+    return owner.pets[0].name;
+  });
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Loop and return deeply nested property</h3>
+          <pre><code data-noescape>
+  // Fetch the name of the first pet from each owner
+  var ownerArr = [{
+      "owner": "Colin",
+      "pets": [{"name":"dog1"}, {"name": "dog2"}]
+  }, {
+      "owner": "John",
+      "pets": [{"name":"dog3"}, {"name": "dog4"}]
+  }];
+
+  // Lodash with callback
+  _.map(ownerArr, function(owner){
+    return owner.pets[0].name
+  });
+
+  // Lodash with shorthand
+  _.map(ownerArr, 'pets[0].name');
+
+          </code></pre>
+        </section>
+
+        <section>
+          <h3>Check all persons taller than 190</h3>
+          <pre><code data-noescape>
+  var persons = [
+    { name: 'Bob', height : 195 },
+    { name: 'Stefan', height : 183}
+  ];
+
+  var allPersonsTallerThan190 = _.every(persons, function(person) {
+    return person.height > 190;
+  });
+
+  // => false
+        </code></pre>
+        </section>
+
+        <section>
+          <h3>Chaining</h3>
+          <pre><code data-noescape>
+  var ary = [false, 0, 0, true, true];
+  var final = _(ary)
+                .compact()
+                .uniq()
+                .value();
+
+  // => [true]
+          </code></pre>
+        </section>
+
+        <section>
+          <h2>Questions?</h2>
+        </section>
+
+        <section>
+          <h2>Workshop Overview</h2>
+          <ul>
+            <li>Koans style approach</li>
+            <li>Divided into three sections
+              <ul>
+                <li>API orientation</li>
+                <li>Project-based lodash function application</li>
+                <li>Data exploration, lodash chaining syntax</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Workshop introduction</h2>
+          <ul>
+            <li>Open <em>lodash.com</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/KoansRunnerJS.html</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/koans/js/AboutExpects.js</em> in a text editor</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Break time!</h2>
+          <ul>
+            <li>15 minutes</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Workshop</h2>
+          <ul>
+            <li>Open <em>lodash.com</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/<br>KoansRunnerLoDash.html</em> in your web browser</li>
+            <li>Open <em>code4lib_javascript_workshop/<br>koans/lodash/AboutCollectionMethods.js</em> in a text editor</li>
+          </ul>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+
+    </script>
+
+  </body>
+</html>

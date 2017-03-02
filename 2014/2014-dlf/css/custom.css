@@ -1,0 +1,30 @@
+li {
+    padding-bottom: 10px !important;
+}
+
+img {
+    border: 1px solid LightGrey !important;
+    max-height: 85% !important;
+    max-width: 90% !important;
+}
+
+h3 + img {
+    max-height: 75% !important;
+    max-width: 90% !important;
+}
+
+h2 + img {
+    max-height: 75% !important;
+    max-width: 90% !important;
+}
+
+img.noborder {
+    border: none !important;
+    box-shadow: none !important;
+    /*max-height: 85% !important;
+    max-width: 85% !important;*/
+}
+
+.wbg {
+    background: white !important;
+}

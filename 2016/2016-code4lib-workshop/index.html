@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>lodash.js API Tour</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <script src="lib/jquery-1.12.0.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="lib/css/style.css" />
+  </head>
+  <body data-spy="scroll" data-target="#main-nav" data-offset="70">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">lodash.js API tour</a>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav">
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#structure">Structure</a></li>
+            <li><a href="#content">Content</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#evaluation">Evaluation/Feedback</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="page-header">
+          <h2>lodash.js API Tour</h2>
+          <p class="lead">code4lib 2016 - Philadelphia, PA</p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="introduction">Introduction</h2>
+          <p>
+          Welcome to the lodash.js API tour.
+          </p>
+          <p>
+            In this workshop, you'll be introduced to lodash.js, which is a popular Javascript library that provides utility functions for interacting
+            with collections (objects, arrays), strings, etc.
+          </p>
+          <p>
+            Our goals for this workshop are that participants gain:
+            <ul>
+              <li>Familiarity with the lodash.js library, including why you'd want to use it, and what you could use it for.</li>
+              <li>Hands-on experience using functions provided by lodash.js</li>
+            </ul>
+          </p>
+          <br />
+          <h3>Logistical Information</h3>
+          <ul>
+            <li><b>Date:</b> Monday March 7th, 2016</li>
+            <li><b>Time:</b> 9:00am - 12:00pm</li>
+            <li><b>Location:</b> American Philosophical Society - Franklin Hall - Fels Room</li>
+            <li><b>Led by:</b> Bret Davidson, Kevin Beswick - NCSU Libraries</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h2 id="structure">Workshop Structure</h2>
+          <p>This workshop is divided into a lecture and a hands-on portion. The lecture will introduce the API,
+          provide some context, history and use-cases, as well as introduce the format of the workshop.
+          The hands-on portion will provide opportunity to explore the API using a Koans-style learning experience.
+          First, you will learn some common methods in the API and practice applying them. Second, you will apply what
+          you've learned to clean up a dataset which will be used to produce a visualization that may be useful in
+          planning your post-conference social activities.</p>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Schedule</h3>
+              <table class="table table-striped">
+                <tr>
+                  <th>Time</th>
+                  <th>Activity</th>
+                </tr>
+                <tr>
+                  <td>9:15-9:15am</td>
+                  <td>Intro</td>
+                </tr>
+                <tr>
+                  <td>9:15-9:45am</td>
+                  <td>Lecture</td>
+                </tr>
+                <tr>
+                  <td>9:45-10:00am</td>
+                  <td>Technical Orientation</td>
+                </tr>
+                <tr>
+                  <td>10:00-10:15am</td>
+                  <td>Break</td>
+                </tr>
+                <tr>
+                  <td>10:15-11:45am</td>
+                  <td>Lab</td>
+                </tr>
+                <tr>
+                  <td>11:45-12:00pm</td>
+                  <td>Wrap-up/Evals</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="content" class="row">
+        <div class="col-md-12">
+          <h2>Workshop Content</h2>
+            <p>
+              <a href="presentation/index.html" target="_blank"><button type="button" class="btn btn-primary btn-lg">Presentation Slides</button></a>
+              <a href="lodash_docs.html" target="_blank"><button type="button" class="btn btn-primary btn-lg">Lodash Docs</button></a>
+              <a href="KoansRunnerJS.html" target="_blank"><button type="button" class="btn btn-primary btn-lg">Workshop Orientation</button></a>
+              <a href="KoansRunnerLoDash.html" target="_blank"><button type="button" class="btn btn-primary btn-lg">Start Workshop</button></a>
+            </p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="resources" class="row">
+        <div class="col-md-12">
+          <h2>Resources</h2>
+          <dl>
+            <dt><a href="http://www.lodash.com/">lodash.js official website</a></dt>
+            <dd>The official lodash website where you can download the library, and find more information.</dd>
+            <dt><a href="http://www.lodash.com/docs">lodash.js API documentation</a></dt>
+            <dd>The lodash.js API documentation where you can find out about all lodash methods, including ones that we haven't looked at in this workshop.</dd>
+            <dt><a href="https://github.com/lodash/lodash">lodash.js GitHub repository</a></dt>
+            <dd>Here is the code for lodash.js</dd>
+            <dt><a href="https://medium.com/@SharpShark28/lodash-chaining-83e7460fb1d4">Lodash: Chaining</a></dt>
+            <dd>Article describing the lodash chaining feature</dd>
+            <dt><a href="https://leanpub.com/lodashcookbook/read">Lodash Cookbook</a></dt>
+            <dd>E-book that provides an introduction to lodash</dd>
+
+          </dl>
+        </div>
+      </div>
+
+      <hr>
+
+      <div id="evaluation" class="row">
+        <div class="col-md-12">
+          <h2>Evaluation/Feedback</h2>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://docs.google.com/forms/d/1laodvjnxC5PDJO-55hOx9pIkbc3su80jjRvYZeNNYOQ/viewform?embedded=true" width="1140" height="1080" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+          </div>
+          <h3>Contact Us</h3>
+          <h4>Kevin Beswick</h4>
+          <ul class="list-unstyled">
+            <li>Email: <a href="mailto:kdbeswic@ncsu.edu">kdbeswic@ncsu.edu</a></li>
+            <li>Twitter: <a href="http://www.twitter.com/kbeswick">@kbeswick</a></li>
+          </ul>
+
+          <h4>Bret Davidson</h4>
+          <ul class="list-unstyled">
+            <li>Email: <a href="mailto:bddavids@ncsu.edu">bddavids@ncsu.edu</a></li>
+          </ul>
+         </div>
+      </div>
+    </div>
+  </body>
+</html>

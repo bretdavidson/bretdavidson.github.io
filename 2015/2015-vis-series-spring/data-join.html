@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Join Demo</title>
+        <style>
+            #control {
+                margin-bottom: 20px;
+            }
+            #chart {
+                width:500px;
+                float:left;
+            }
+            #text {
+                width:300px;
+                float:left;
+            }
+            #wrap {
+                width: 900px;
+            }
+            #test {
+                width: 600px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="control"><button id="update">Update</button></div>
+        <div id="wrap">
+            <div id="chart"></div>
+            <div id="text"></div>
+        </div>
+
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.0.1/d3.v3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/1.0.1/lodash.min.js"></script>
+        <script>
+            (function() {
+                var data0,
+                    data1,
+                    height,
+                    svg,
+                    width;
+
+                data0 = [10, 15, 6, 18, 9],
+                data1 = [10, 15, 14, 20, 3, 30, 16],
+                width = 400,
+                height = 900;
+
+
+                // Append SVG to container
+                svg = d3.select('#chart')
+                        .append('svg')
+                        .attr('width', width)
+                        .attr('height', height);
+
+                // Swap data sets
+                function setData() {
+                    var d = data0;
+                    data0 = data1;
+                    data1 = d;
+                    return data1;
+                }
+
+                function update() {
+                    var data,
+                        rects,
+                        x;
+
+                    data = setData();
+
+                    x = d3.scale.linear()
+                        .domain([0, d3.max(data)])
+                        .range([0, 350]);
+
+                    rects = svg.selectAll('rect').data(data);
+                    // rects = svg.selectAll('rect').data(data, function (d) {return d;});
+
+                    // Update old nodes
+                    rects.style('fill', 'steelblue')
+
+                    // Enter
+                    rects.enter()
+                        .append('rect')
+                        .style('fill', 'green');
+
+                    console.log('enter', rects.enter())
+
+                    // Update AND Enter
+                    rects.transition().duration(500)
+                        .attr('x', 20)
+                        .attr('y', function (d, i) {return 65 * i;})
+                        .attr('height', '60' )
+                        .attr('width', function(d, i) {return x(d);});
+
+                    console.log('update', rects)
+
+                    // Exit
+                    rects.exit()
+                        .style('fill', 'red')
+                        .transition().duration(2500)
+                        .attr('width', 0)
+                        .remove();
+
+                    console.log('exit', rects.exit())
+
+                    // Display Code Only for Demo
+                    d3.select('#text')
+                        .text(function () {
+                            if (rects.enter()[0].length === 5) {
+                                return 'ALL 5 Elements Are New';
+                            } else {
+                                var test1 = _.any(rects.enter()[0], Boolean)
+                                if (test1) {
+                                    return 'Add 2 NEW Elements, UPDATE 5 Old Elements';
+                                } else {
+                                    return 'REMOVE 2 Elements, UPDATE 5 Old Elements';
+                                }
+                            }
+                        })
+                        .style('font-size', '50px');
+                }
+
+                update();
+
+                d3.select('#update').on('click', function () {
+                    update();
+                })
+            })();
+        </script>
+    </body>
+</html>

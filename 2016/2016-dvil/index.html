@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Git & GitHub Overview</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Git & GitHub Overview</h2>
+					<h3>Data Visualization Institute for Librarians</h3>
+					<h4>Heidi Tebbe | Bret Davidson</h4>
+				</section>
+
+				<section>
+					<h2>Slides</h2>
+					<p><a href="http://bretdavidson.github.io/dvil_github/#/">bretdavidson.github.io/dvil_github</a></p>
+				</section>
+
+				<section>
+					<h2>The Plan</h2>
+					<ul>
+						<li>Why use version control systems?</li>
+						<li>What is Git?</li>
+						<li>What is GitHub?</li>
+						<li>Evaluating software projects on GitHub.</li>
+						<li>Using GitHub without the command line.</li>
+						<li>Non-code uses for Git & GitHub.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Why use version control?</h2>
+				</section>
+
+				<section>
+					<h2>How to save documents!</h2>
+					<ul>
+						<li class="fragment">annual.docx</li>
+						<li class="fragment">annual_final.docx</li>
+						<li class="fragment">annual_final_JC.docx</li>
+						<li class="fragment">annual_final_JC_2.docx</li>
+						<li class="fragment">annual_final_final.docx</li>
+						<li class="fragment">annual_final_final_corrected.docx</li>
+						<li class="fragment">FINAL_annual_final.docx</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What does version control do?</h2>
+					<ul>
+						<li>Records the history of changes to a set of related files inside of a "repository".</li>
+						<li>Enables navigation of that change history.</li>
+						<li>Supports sharing of the repository among a group of collaborators.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Two Kinds of Version Control</h2>
+					<ul>
+						<li>Centralized</li>
+							<ul>
+								<li>Examples are CVS and Subversion</li>
+							</ul>
+						<li>Distributed</li>
+							<ul>
+								<li>Examples are Git and Mercurial</li>
+							</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What is Git?</h2>
+					<ul>
+						<li>Git is a distributed version control system.</li>
+						<li>Original author is Linus Torvalds, of Linux fame.</li>
+						<li>"I'm egotistical, and I name all my projects after myself."</li>
+						<li class="fragment">git means "unpleasant person" in British slang.</li>
+					</ul>
+				</section>
+
+				<section>
+					<img class="stretch" src="img/git_folder.png" alt="git folder">
+				</section>
+
+				<section>
+					<h2>What is GitHub?</h2>
+					<ul>
+						<li>GitHub is a Git repository hosting service.</li>
+						<li>Adds services on top of Git like issues, wikis, and social networking.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Common Commands</h2>
+				</section>
+
+				<section>
+					<h2>checkout/clone</h2>
+					<p>obtain a copy of a repository</p>
+				</section>
+
+				<section>
+					<h2>pull/sync</h2>
+					<p>update your local copy of repo to the latest version</p>
+				</section>
+
+				<section>
+					<h2>branch</h2>
+					<p>create a separate version of the files in the repo</p>
+				</section>
+
+				<section>
+					<h2>commit</h2>
+					<p>record a set of changes</p>
+				</section>
+
+				<section>
+					<h2>push/publish</h2>
+					<p>send your changes to the central or remote repo</p>
+				</section>
+
+				<section>
+					<h2>Critical Features of GitHub</h2>
+					<ul>
+						<li>Fork</li>
+						<li>Pull Request</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>fork</h2>
+					<p>create a copy (clone) in order to make your own changes</p>
+					<p>use someone else's project as a starting point <br>OR <br> propose changes to the original</p>
+				</section>
+
+				<section>
+					<h2>pull request</h2>
+					<p>mechanism for submitting your changes to original project</p>
+					<p>project owner "pulls" in  your changes</p>
+				</section>
+
+				<section>
+					<h2>Web Client Overview</h2>
+					<p><a target="_blank" href="https://github.com/bretdavidson">github.com/bretdavidson</a></p>
+					<p><a target="_blank" href="https://github.com/cazzerson/Suma">github.com/cazzerson/Suma</a></p>
+				</section>
+
+				<section>
+					<h2>What is GitHub Desktop?</h2>
+					<p><a target="_blank" href="https://desktop.github.com/">desktop.github.com</a></p>
+				</section>
+
+				<section>
+					<h2>Non-code Uses</h2>
+					<ul>
+						<li>Knowledge Base</li>
+						<li>Data Management</li>
+						<li>Communication</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Knowledge Base</h2>
+					<ul>
+						<p><a href="https://github.com/NCSU-Libraries/visualization_templates" target="_blank">https://github.com/NCSU-Libraries/<br />visualization_templates</a></p>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Visualization Templates</h2>
+						<img class="stretch" src="img/viz_template_table.png" alt="git folder">
+				</section>
+
+				<section>
+					<h2>Diffing Images</h2>
+					<img class="stretch" src="img/swipe.gif" alt="git folder">
+				</section>
+				<section>
+					<h2>Caveats</h2>
+						<img class="stretch" src="img/download_repo.gif" alt="git folder">
+					<ul>
+						<li>No ZIP files for folders</li>
+						<li class="fragment">Not a digital asset management system</li>
+						<li class="fragment">Licenses</li>
+					</ul>
+
+				</section>
+				<section>
+					<h2>Data Management</h2>
+					<ul>
+						<p><a href="https://guides.github.com/activities/citable-code/" target="_blank">Making Your Code Citable</a></p>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Communication</h2>
+					<ul>
+						<li>Jupyter Notebooks</li>
+						<li>GitHub Pages</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Jupyter Notebooks</h2>
+					<ul>
+						<li>interactive environments that can contain executable code, rich text, mathematics, plots </li>
+						<li class="fragment">support over 40 programming languages, including Python and R</li>
+						<li class="fragment"><em>Jupyter Notebook App</em> : server-client application that allows editing and running of notebook documents via a web browser</li>
+						<li class="fragment"><em>Jupyter Notebook Viewer</em> : free web service that allows you to share static versions of publicly available hosted notebook files</li>
+						<li class="fragment">render directly on GitHub</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Pages</h2>
+						<p><a href="https://pages.github.com" target="_blank">https://pages.github.com</a></p>
+						<p><a href="http://cazzerson.github.io/Suma" target="_blank">http://cazzerson.github.io/Suma</a></p>
+				</section>
+
+				<section>
+					<h2>Logistics</h2>
+				</section>
+
+				<section>
+					<h2>File and Repository Sizes</h2>
+					<ul>
+						<li class="fragment">git : <em>no file size or file number limits</em></li>
+						<li class="fragment">GitHub repositories : <em> 1 GB</em></li>
+						<li class="fragment">files added to GitHub via browser : <em>25 MB limit</em></li>
+						<li class="fragment">files added to GitHub via command line : <em>100 MB limit</em></li>
+								<li class="fragment">files stored using Git Large File Storage (LFS) : <em>2 GB limit</em></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Public vs. Private</h2>
+					<ul>
+						<li class="fragment">git : <em>private</em></li>
+						<li class="fragment">free GitHub account : <em>public</em></li>
+						<li class="fragment">paid GitHub plans : <em>public</em> AND <em>private</em></li>
+						<li class="fragment">students using GitHub : <em>public</em> AND <em>private</em></li>
+					</ul>
+				</section>
+
+<section>
+	<h2>Further Learning</h2>
+	<p align="left"><b>Free Tutorials</b>
+	<ul>
+		<li>Try Git: <a href="https://www.codeschool.com/courses/try-git" target="_blank">https://www.codeschool.com/courses/try-git</a></li>
+		<li>Pro Git Ebook: <a href="https://git-scm.com/book/en/v2" target="_blank">https://git-scm.com/book/en/v2</a></li>
+		<li>GitHub Guides:  <a href="https://guides.github.com/" target="_blank">https://guides.github.com</a></li>
+</ul>
+</p>
+	<p align="left"><b>Documentation</b>
+	<ul>
+		<li>git Documentation: <a href="https://git-scm.com/documentation" target="_blank">https://git-scm.com/documentation</a></li>
+		<li>GitHub Help: <a href="https://help.github.com/" target="_blank">https://help.github.com</a></li>
+</ul>
+</p>
+</section>
+
+				<section>
+					<h1>Questions?</h1>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

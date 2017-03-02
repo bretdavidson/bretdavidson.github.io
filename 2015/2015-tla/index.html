@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>Suma</title>
+
+    <meta name="description" content="An overview of the Suma project.">
+    <meta name="author" content="Jason Casden">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Suma: A Mobile Space and Service Assessment Toolkit</h2>
+          <h4>Using Suma to inform space and service planning</h4>
+          <p><small>Jason Casden  |  Bret Davidson</small></p>
+          <p>NCSU Libraries</p>
+        </section>
+
+        <section>
+          <h2>Outline</h2>
+          <ol>
+            <li>Why Suma?</li>
+            <li>How do libraries use it?</li>
+            <li>How does it work?</li>
+            <li>What's next?</li>
+            <li>How to get started?</li>
+          </ol>
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/suma-joyce-comic.png">
+          <br>
+          <small>by Joyce Chapman, Suma community development and data analysis specialist.</small>
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/headcount_form.png">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/headcount_overnight.jpg">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/Sandbox-form.png">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/learning_commons_forms_Page_1.png">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/vetmedlibrarymap0412-1.png">
+        </section>
+
+        <section>
+          <p>Could we collect more detailed data, more easily, with fewer errors, and manage it all more consistently?</p>
+        </section>
+
+        <section>
+          <p>And could we build more sophisticated and intuitive analysis tools that are totally reusable for all data by lots of people in our institution?</p>
+        </section>
+
+        <section>
+          <p>Could we then use data about space and service usage to make better decisions (even small ones)?</p>
+        </section>
+
+        <section>
+          <h2>The web has had this for years</h2>
+          <img class="stretch noborder" src="img/google_analytics.png">
+        </section>
+
+        <section>
+          <h2>Web Analytics</h2>
+          <h3>Collecting rich relational data for a new service is trivial or easy.</h3>
+        </section>
+        <section>
+          <h2>Spreadsheets</h2>
+          <h3>Collecting data requires error-prone and time-consuming data entry.</h3>
+        </section>
+        <section>
+          <h3>Less data is collected, with less detail, less often.</h3>
+        </section>
+        <section>
+          <h2>Web Analytics</h2>
+          <h3>Years of data for dozens of services is in one place.</h3>
+        </section>
+        <section>
+          <h2>Spreadsheets</h2>
+          <h3>Many spreadsheets, many formats, split by year or semester, stored in a variety of locations.</h3>
+        </section>
+        <section>
+          <h3>Cross-service analysis is rare.</h3>
+        </section>
+        <section>
+          <h2>Web Analytics</h2>
+          <h3>Although APIs exist, analysis tools are easy to use and can be accessed by many people.</h3>
+          <h4>They're also the same for every dataset.</h4>
+        </section>
+        <section>
+          <h2>Spreadsheets</h2>
+          <h3>Limited analysis tools. Can a programmer help?</h3>
+        </section>
+        <section>
+          <h3>Fewer people use data to inform fewer decisions with less sophisticated queries.</h3>
+        </section>
+
+        <section>
+          <h2>Suma</h2>
+          <p>An open source tablet-based app (well, toolkit) to aid library staff in assessment of how patrons are using library spaces.</p>
+          <br>
+          <p>In other words…the gathering, storing, exporting, analyzing, and visualizing of data across spaces/activities/time and around events.</p>
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/suma_data_model.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/SpaceUsageiPadWireframe-June-2010.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-original.png" alt="">
+        </section>
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-second.png" alt="">
+        </section>
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-third.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-locations.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-activities.png" alt="">
+        </section>
+
+        <section data-transition="none">
+          <img class="stretch noborder" src="img/suma-client-button.png" alt="">
+        </section>
+
+        <section>
+          <h2>Data collection</h2>
+          <img class="stretch noborder" src="img/clicker.png" alt="">
+        </section>
+
+        <section>
+          <h2>Suma data collection</h2>
+          <img class="stretch noborder" src="img/suma_thumb.png" alt="">
+        </section>
+
+        <section>
+          <h2>Staff as sensors</h2>
+          <img class="stretch noborder" src="img/suma-joyce-walking.png" alt="">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/suma_refdesk_patron.png" alt="">
+        </section>
+
+        <section>
+          <img class="stretch noborder" src="img/suma_refdesk_form.png" alt="">
+        </section>
+
+        <section>
+          <video controls class="stretch noborder">
+            <source data-src="video/client_movie.webm" type="video/webm">
+              <source data-src="video/client_movie.mp4" type="video/mp4">
+                Your browser does not support the <code>video</code> element.
+              </video>
+            </section>
+
+            <section>
+              <h2>Understanding our users</h2>
+              <ul>
+                <li>Where do our users go?</li>
+                <li>What are they doing?</li>
+                <li>When are they doing it?</li>
+                <li>What <em>could</em> they be doing?</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Space and Service Analytics</h2>
+              <ul>
+                <li>Staff scheduling</li>
+                <li>Building hours</li>
+                <li>Service desk service patterns</li>
+                <li>Study room reservations</li>
+                <li>Technology and furniture use</li>
+                <li>Use of specialized spaces (e.g. Graduate Commons)</li>
+                <li>Comparing branch and main libraries, at different times of day</li>
+                <li>Special Collections researcher services</li>
+                <li>Turnaways (e.g. Technology Lending)</li>
+                <li>Combine with other data: circulation, gate counts, tech lending, reserves, online services</li>
+              </ul>
+            </section>
+
+            <!-- Technical section -->
+            <section data-transition="none">
+              <h2>System Overview</h2>
+              <img class="stretch noborder" src="img/census_1.png">
+            </section>
+
+            <section data-transition="none">
+              <h2>System Overview</h2>
+              <img class="stretch noborder" src="img/census_2.png">
+            </section>
+
+            <section data-transition="none">
+              <h2>System Overview</h2>
+              <img class="stretch noborder" src="img/census_3.png">
+            </section>
+
+            <section data-transition="none">
+              <h2>System Overview</h2>
+              <img class="stretch noborder" src="img/census_4.png">
+            </section>
+
+            <section>
+              <h2>Data Synchronization</h2>
+              <img class="stretch noborder" src="img/data_sync.png">
+            </section>
+
+            <section>
+              <h2>Core Technologies</h2>
+              <ul>
+                <li>Zend PHP Framework</li>
+                <li>MySQL, Web SQL Database, Persistence.js</li>
+                <li>AngularJS</li>
+                <li>D3.js</li>
+              </ul>
+            </section>
+
+            <!-- Analysis in Action -->
+            <section>
+              <h2>Analysis in Action</h2>
+              <ul>
+                <li>Sample Data</li>
+                <li>2 of 5 reports</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Time of Day</h2>
+
+              <p>Reference v. Computing</p>
+            </section>
+
+            <section>
+              <h2>Day of Year</h2>
+              <ul>
+                <li>Period Totals</li>
+                <li>Reference Only</li>
+                <li>Time of Day/Day of Week</li>
+                <li>Jumbo Report</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Other reports</h2>
+              <ul>
+                <li>Nightly email report</li>
+                <li>Calendar heat map</li>
+                <li>Collecting sessions summary</li>
+              </ul>
+            </section>
+
+            <!-- Final section -->
+            <section>
+              <h2>Project team</h2>
+              <ul>
+                <li>Jason Casden</li>
+                <li>Bret Davidson</li>
+                <li>Joyce Chapman</li>
+                <li>Rob Rucker</li>
+                <li>Rusty Earl</li>
+                <li>Eric McEachern</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Future goals</h2>
+              <ul>
+                <li>Arbitrary day boundaries (done)</li>
+                <li>Easier pilot project deployment (in progress)</li>
+                <li>Improved documentation (in progress)</li>
+                <li>Broader client browser support</li>
+                <li>Improved support for third-party analytics systems</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Open Source</h2>
+              <ul>
+                <li>100+ active academic library pilot projects</li>
+                <li>Hosted on GitHub</li>
+                <li>Pull requests are always welcome</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2>Open Source support (free kittens)</h2>
+              <img class="stretch noborder" src="img/catfood.jpg">
+            </section>
+
+
+            <!-- Goals within Suma -->
+            <section>
+              <h3>For Suma, the vast majority of our project support is during the installation process.</h3>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"[W]ho would be the best person on your team to talk with about the technical requirements and skills needed for us to install SUMA and get it up and running. For example, do we need a computer programmer with such and such skills. <strong>I’m sure you have good documentation available, however, we would like to talk with someone.</strong>  We are also curious as to how much time it would take to get SUMA working for us.  <strong>I am not sure we have the expertise in-house.</strong>"</p>
+              </blockquote>
+              <p><small>- librarian at a RU/H research university (with permission)</small></p>
+            </section>
+
+            <section>
+              <h3>On canceling a pilot project...</h3>
+              <blockquote>
+                <p>"Ultimately, I didn’t want to get on our IT support’s bad side and because I’m not allowed to play with our development servers I can’t exactly go at the installation process alone."</p>
+              </blockquote>
+              <p><small>- librarian at a RU/VH research university you've totally heard of (with permission)</small></p>
+            </section>
+
+            <section>
+              <img src='img/public-library-tech-support.jpg' class="stretch" alt='' />
+              <p><small><a href="http://www.ala.org/research/sites/ala.org.research/files/content/initiatives/plftas/2011_2012/plftas12_technology%20landscape.pdf">2011-2012 ALA Public Library Funding &amp; Technology Access Study</a></small></p>
+            </section>
+
+            <section>
+              <h3>(Selected) List of Suma Install Issues</h3>
+              <ul>
+                <li>mod_rewrite disabled</li>
+                <li>cURL missing</li>
+                <li>config errors</li>
+                <li>symlink problems</li>
+                <li>server hardening software</li>
+                <li>db access</li>
+                <li>installation method confusion</li>
+              </ul>
+            </section>
+
+            <section>
+              <p>Our goal: If you can install Firefox, <br>you can install our software.</p>
+            </section>
+
+            <section>
+              <p>cazzerson.github.io/Suma</p>
+              <video loop data-autoplay class="stretch noborder">
+                <source data-src="video/demo.webm" type="video/webm">
+                  <source data-src="video/demo.mp4" type="video/mp4">
+                    Your browser does not support the <code>video</code> element.
+                  </video>
+                  <p>Thanks! || @cazzerson || jmcasden@ncsu.edu</p>
+                </section>
+              </div>
+            </div>
+
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.js"></script>
+
+            <script>
+
+              // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+
+              transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+              // Optional reveal.js plugins
+              dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/zoom-js/zoom.js', async: true },
+                { src: 'plugin/notes/notes.js', async: true }
+              ]
+            });
+            </script>
+
+          </body>
+        </html>

@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+
+    <title>Beyond Open Source - Code4Lib 2015</title>
+
+    <meta name="description" content="Beyond Open Source presentation at 2015 LITA Forum">
+    <meta name="author" content="Jason Casden">
+    <meta name="author" content="Bret Davidson">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <style>
+      img {
+        border: none !important;
+        box-shadow: none !important;
+      }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="reveal">
+
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+        <section>
+          <h2>Beyond Open Source</h2>
+          <p>
+            <small>Jason Casden (@cazzerson)</small>
+            <br>
+            <small>Bret Davidson</small>
+            <br>
+            <small>2015 LITA Forum</small>
+            <br>
+            <br>
+            <span>Slides: cazzerson.github.io/LITA-2015-slides</span>
+          </p>
+        </section>
+
+        <section>
+          <section
+            <section>
+              <h3>This talk starts where we usually end.</h3>
+            </section>
+
+            <section data-background-video="video/suma-acrl-oss-clip.mp4,video/suma-acrl-oss-clip.webm">
+              <p>&nbsp;</p>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"[W]ho would be the best person on your team to talk with about the technical requirements and skills needed for us to install SUMA and get it up and running. For example, do we need a computer programmer with such and such skills. <strong>I’m sure you have good documentation available, however, we would like to talk with someone.</strong>  We are also curious as to how much time it would take to get SUMA working for us.  <strong>I am not sure we have the expertise in-house.</strong>"</p>
+              </blockquote>
+              <p><small>- librarian at a RU/H research university (with permission)</small></p>
+            </section>
+
+            <section>
+              <h3>On canceling a pilot project...</h3>
+              <blockquote>
+                <p>"Ultimately, I didn’t want to get on our IT support’s bad side and because I’m not allowed to play with our development servers I can’t exactly go at the installation process alone."</p>
+              </blockquote>
+              <p><small>- librarian at a RU/VH research university you've totally heard of and might work at (with permission)</small></p>
+            </section>
+          </section>
+
+          <section>
+            <h3>How has free software supported growing user communities?</h3>
+          </section>
+
+          <section>
+            <section>
+              <h3>1950s-1960s: The Great Unbundling</h3>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"In the early days of computing, the need to generate massive adoption was strong and the compatibility threat was weak&mdash;open-source software reigned supreme."</p>
+              </blockquote>
+              <p><small>Martin Campbell-Kelly &amp; Daniel D. Garcia-Swartz. (2009). <a href="http://www.sciencedirect.com/science/article/pii/S0167624509000201?np=y">"Pragmatism, not ideology: Historical perspectives on IBM's adoption of open-source software."</a></small></p>
+            </section>
+
+            <section>
+              <h3>A-2 system</h3>
+              <img class="stretch" src='img/hopper-univac.jpg' alt='' />
+              <p><small><a href="http://alums.vassar.edu/news/2011-2012/120815-hopper.html">"Amazing Grace: Hopper's Computer Innovations."</a> Vassar Hub.</small></p>
+            </section>
+
+            <section>
+              <img class="stretch" src='img/A2_diagram_4.jpg' alt='' />
+            </section>
+
+            <section>
+              <img src='img/IBM_SABRE.jpg' alt='' class="stretch" />
+            </section>
+
+            <section>
+              <h3>Free? software</h3>
+              <p>Big vendors, big machines, big users.</p>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"Such practices allegedly included anticompetitive price discrimination such as giving away software services for "the purpose or with the effect of . . . enabling IBM to maintain or increase its market share . . . . " (Id. at 9.) The Government also alleged that IBM's bundling of software with "related computer hardware equipment" for a single price was anticompetitive. (Id. at 10.)"</p>
+                <p><small>(1995). <a href="http://www.justice.gov/atr/cases/f0800/0810.htm">"United States' Memorandum on the 1969 Case." [United States vs. International Business Machines Corporation].</a></small></p>
+              </blockquote>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h3>1970s: Stop the hobbyists!</h3>
+              <img src='img/homebrew_cover.jpg' alt='' class="stretch" />
+              <br>
+              <small><a href="http://www.atariarchives.org/deli/homebrew_cover.jpg">The cover of the Homebrew Computer Club's first newsletter.</a></small>
+            </section>
+
+            <section>
+              <img src="img/altair-popular-electronics-1975.jpg" alt="" class="stretch">
+              <p><small><a href="http://www.digibarn.com/stories/MITS/img/1975-jan-poptronics-altaircover-scan0001.jpg">Cover of Popular Electronics, January 1975.</a></small></p>
+            </section>
+
+            <section>
+              <img src='img/DECUS-pins.jpg' alt='' />
+              <p><small><a href="http://www.computerhistory.org/collections/catalog/102680795">"Black and white image of four lapel buttons."Performance Plus VAX II/785 digital" with a star in center; "Interact with BASIC" in script; "
+                    VAXstation 1090"; " I gave to the library DECUS" on a reel of tape. Two of these were used in the book, VAXstation 110 and Interact with BASIC."</a></small></p>
+            </section>
+
+            <section>
+              <img src='img/Bill_Gates_Letter_to_Hobbyists.jpg' alt='' class='stretch'>
+            </section>
+
+            <section>
+              <blockquote style="font-size: 32px">
+                <p>"<strong>One thing you do do is prevent good software from being written.</strong> Who can afford to do professional work for nothing? What hobbyist can put 3-man years into programming, finding all bugs, documenting his product and distribute for free? The fact is, no one besides us has invested a lot of money in hobby software. We have written 6800 BASIC, and are writing 8080 APL and 6800 APL, but there is very little incentive to make this software available to hobbyists. <strong> Most directly, the thing you do is theft.</strong>"</p>
+                <p><small>Bill Gates. (1976). <a href="http://www.digibarn.com/collections/newsletters/homebrew/V2_01/index.html">"Open Letter to Hobbyists."</a></small></p>
+              </blockquote>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h3>1980s: My parents get a computer.</h3>
+              <img class="stretch" src='img/jason-TI.jpg' alt='' />
+            </section>
+
+            <section>
+              <img class="stretch" src="img/software_sells_systems.jpg" alt="">
+              <p><small><a href="http://www.roughlydrafted.com/2007/09/10/office-wars-3-how-microsoft-got-its-office-monopoly/">"Office Wars 3 – How Microsoft Got Its Office Monopoly"</a></small></p>
+            </section>
+
+            <section>
+              <img src='img/dosbox-installer.png' alt='' class="stretch" />
+              <p><small><a href="http://colonelsbequest.net/decor/dosbox2.png">Sierra Game Setup/Installation Program.</a> (1988).</small></p>
+            </section>
+
+            <section>
+              <h3>Shareware</h3>
+              <img class="stretch" src='img/pccalc.png' alt='' />
+            </section>
+
+            <section>
+              <h3>GNU, BSD, MIT licenses</h3>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"Unix is not my ideal system, but it is not too bad. The essential features of Unix seem to be good ones, and I think I can fill in what Unix lacks without spoiling them. And a system compatible with Unix would be convenient for many other people to adopt."</p>
+              </blockquote>
+              <p><small>Richard Stallman. (1985). <a href="https://www.gnu.org/gnu/manifesto.html">"The GNU Manifesto."</a></small></p>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h3>1990s-Now</h3>
+              <h4>My grandparents get a computer.</h4>
+              <img src="img/gateway_truck.jpg" alt="" class="stretch">
+              <br>
+              <small><a href="https://www.flickr.com/photos/textfiles/sets/72157616506646434/">Gateway 2000 1994 Desktops.</a></small>
+            </section>
+
+            <section>
+              <img src='img/mozilla_phoenix.jpg' class='stretch' alt='' />
+            </section>
+
+            <section>
+              <h3>Feb 3, 1998: "Open Source"</h3>
+              <blockquote style="font-size:28px;"><p>"<strong>The conferees believed the pragmatic, business-case grounds that had motivated Netscape to release their code illustrated a valuable way to engage with potential software users and developers</strong>, and convince them to create and improve source code by participating in an engaged community. The conferees also believed that it would be useful to have a single label that identified this approach and distinguished it from the philosophically- and politically-focused label "free software." Brainstorming for this new label eventually converged on the term "open source", originally suggested by Christine Peterson."</p></blockquote>
+              <p><small><a href="http://opensource.org/history">History of the OSI</a></small></p>
+            </section>
+
+            <section data-background="img/linux_penguin.jpg">
+              <p>&nbsp;</p>
+              <div class="stretch">
+                <p style="position:absolute;bottom:0;"><small><a style="color:white;" href="http://wallpaper-kid.com/linux-penguin-wallpaper-1920x1080.htm">Tux wallpaper</a></small></p>
+              </div>
+            </section>
+
+            <section>
+              <img src="img/RHT-chart.jpg" class="stretch" alt="">
+            </section>
+
+            <section>
+              <blockquote style="font-size: 32px">
+                <p>"The more recent switch to hybrid strategies reveals (a) <strong>an attempt to recreate, via open-source software, the single-platform scenario that IBM achieved with System/360</strong> (and that IBM failed to recreate, in a proprietary context, via SAA), and (b) an attempt to boost revenues from middleware and services <strong>while allowing the old cash cows (e.g. proprietary operating-system software) to peacefully die an unavoidable death</strong>."</p>
+              </blockquote>
+              <p><small>Martin Campbell-Kelly &amp; Daniel D. Garcia-Swartz. (2009). <a href="http://www.sciencedirect.com/science/article/pii/S0167624509000201?np=y">"Pragmatism, not ideology: Historical perspectives on IBM's adoption of open-source software."</a></small></p>
+            </section>
+          </section>
+
+          <!-- Linux as neutral platform section -->
+
+          <section>
+            <section>
+              <blockquote style="font-size: 32px">
+                <p>"<strong>In the open source community there exists a tremendous need for exactly the skills librarians have always used in making information resources truly useful.</strong> In particular, systems testing, evaluation, and feedback to open source designers is welcome and even sought after; documentation for open source systems is always needing improvement; instructional materials for open source products are often lacking. These are all areas in which librarians excel."</p>
+              </blockquote>
+              <p><small>Dan Chudnov. (1999). <a href="http://www.oss4lib.org/readings/oss4lib-getting-started.php">"Open Source Library Systems: Getting Started."</a></small></p>
+            </section>
+
+            <section>
+              <blockquote style="font-size: 32px">
+                <p>"We hope the Code4Lib Journal can manifest the values that have been successful for the Code4Lib community, while providing increased access to the collective knowledge and experience held throughout our diverse professional networks and local organizations, <strong>increasing cross-pollination and collaboration among library technology innovators–and helping more people and organizations become innovators.</strong>"</p>
+              </blockquote>
+              <p><small>Jonathan Rochkind. (2007). <a href="http://journal.code4lib.org/articles/39">"Editorial Introduction — Issue 1."</a> Code4Lib Journal.</small></p>
+            </section>
+
+            <section>
+              <p>Our software generally privileges some users over others.</p>
+            </section>
+
+            <section>
+              <p>Libtech should be able to thrive in diverse environments.</p>
+            </section>
+
+            <section>
+              <img src='img/public-library-tech-support.jpg' class="stretch" alt='' />
+              <p><small><a href="http://www.ala.org/research/sites/ala.org.research/files/content/initiatives/plftas/2011_2012/plftas12_technology%20landscape.pdf">2011-2012 ALA Public Library Funding &amp; Technology Access Study</a></small></p>
+            </section>
+
+            <section>
+              <blockquote>
+                <p>"I believe that building and maintaining library software is vitally important work and it's too big a job to leave to a small group of people. We are creating the future of libraries here."</p>
+              </blockquote>
+              <p><small>Bess Sadler. (2013). <a href="http://www.ibiblio.org/bess/?p=302">"Creating a Commons."</a></small></p>
+            </section>
+          </section>
+
+          <!-- Transition -->
+          <section>
+            <section>
+              <h3>We've done a good job of supporting collaborative development.</h3>
+            </section>
+
+            <section>
+              <h3>Our code is more robust, reliable, and open.</h3>
+            </section>
+
+            <section>
+              <h3>We have more flexibility and more choices.</h3>
+            </section>
+
+            <section>
+              <h3>Current approaches are for those who are almost there.</h3>
+            </section>
+
+            <section>
+              <h3>Many can't manage servers <br>or don't have staff.</h3>
+            </section>
+
+            <section>
+              <h3>Can our tools make our software <br><strong>more available</strong>?</h3>
+            </section>
+          </section>
+
+          <section>
+            <section><h3>We need conscientious software</h3></section>
+
+            <section>
+              <blockquote style="font-size: 32px">
+                <p>"Our software is like children. ... We expect that after a time the child will mature, will grow up, will be able to take care of itself, to solve problems, to cope, and perhaps to contribute something new. Initially selfish—for what other options are there?—the child becomes responsible. With luck or persistence or as the result of good upbringing, the child may become conscientious.</p>
+                <p><strong>Shall we hope similarly for our software?</strong>"</p>
+              </blockquote>
+              <p><small>Richard P. Gabriel &amp; Ron Goldman. (2006). <a href="http://dl.acm.org/citation.cfm?id=1167510">"Conscientious Software."</a></small></p>
+            </section>
+
+            <section>
+              <p>Teaching software how to create <br>an environment in which it can thrive.</p>
+            </section>
+
+            <section>
+              <h3>One way to increase the usefulness of open-source software is to make it <br><strong>easier to install, maintain, and evaluate.</strong></h3>
+            </section>
+          </section>
+
+          <section>
+            <section>
+              <h3>Stopwatch technology availability metrics</h3>
+              <p>For a given user group at a minimum rate of success.</p>
+            </section>
+            <section><h3>1. Time to pilot on a laptop</h3></section>
+            <section><h3>2. Time to export data</h3></section>
+            <section><h3>3. Time to update dependencies</h3></section>
+            <section><h3>4. Time to upgrade application</h3></section>
+            <section><h3>5. Time to migrate application</h3></section>
+            <section><h3>6. Time to new production deployment</h3></section>
+            <section><h3>7. Time to reasonable security</h3></section>
+
+            <section>
+              <h3>Task performance metrics</h3>
+              <ol>
+                <li>Use the same user group within each set of metrics</li>
+                <li>Use the same success rate within each set of metrics</li>
+                <li>Assess all metrics in the set</li>
+              </ol>
+            </section>
+
+            <section>
+              <h3>Example metric definitions</h3>
+              <ul>
+                <li>Time to pilot for subject liaison librarians with 90% success</li>
+                <li>Time to pilot for assessment librarians with 50% success</li>
+                <li>Time to pilot for systems administrators with 80% success</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>What's absent?</h3>
+              <ol>
+                <li>Time to pilot on a laptop</li>
+                <li>Time to export data</li>
+                <li>Time to update dependencies</li>
+                <li>Time to upgrade application</li>
+                <li>Time to migrate application</li>
+                <li>Time to new production deployment</li>
+                <li>Time to reasonable security</li>
+              </ol>
+            </section>
+
+            <section>
+              <h3>This is about the ability to <br><strong>implement and use software</strong>.</h3>
+            </section>
+
+          </section>
+
+          <!-- Possible Solutions -->
+          <section>
+            <section>
+              <h3>What might improve some of these metrics?</h3>
+            </section>
+
+            <section>
+              <h3>Documentation</h3>
+              <p><img src="img/rtfm.png" alt="XKCD RTFM comic"><br>
+                <small><a href="https://imgs.xkcd.com/comics/rtfm.png">"RTFM," XKCD</a></small></p>
+            </section>
+
+            <section>
+              <h3>Installers</h3>
+            </section>
+
+            <section>
+              <img src="img/wordpress_logo.png" alt="wordpress logo">
+              <p><a href="https://wordpress.org/">wordpress.org</a></p>
+            </section>
+
+            <section>
+              <img src="img/wordpress_instructions.png" alt="wordpress instructions">
+            </section>
+
+            <section>
+              <h3>"Create a database for WordPress on your web server."</h3>
+            </section>
+
+            <section>
+              <h3>Vendor-specific deploy scripts</h3>
+              <img src="img/heroku-deploy.png" alt="">
+              <img src="img/azure-deploy.png" alt="">
+            </section>
+
+            <section>
+              <h3>Hosted &amp; Managed Services</h3>
+            </section>
+
+            <section>
+              <img src="img/duracloud.png" alt="duracloud">
+              <img src="img/dspace.jpg" alt="dspace" width="300" height="300">
+              <p><a href="http://www.duracloud.org/">duracloud.org</a></p>
+              <p><a href="http://www.dspacedirect.org/">dspacedirect.org</a></p>
+            </section>
+
+            <section>
+              <h3><a href="https://wiki.duraspace.org/display/hydra/Hydra+in+a+Box">Hydra in a Box</a></h3>
+              <blockquote>Hydra-in-a-Box is a project to extend the existing Hydra project codebase and its vibrant community to build, bundle, and promote a feature-rich, robust, next-generation digital repository that is easy to install, configure, and maintain.</blockquote>
+            </section>
+
+            <section>
+              <h3>Virtualization</h3>
+            </section>
+
+            <section>
+              <img src="img/vagrant.png" alt="vagrant">
+              <p><a href="https://www.vagrantup.com/">vagrantup.com</a></p>
+            </section>
+
+            <section>
+              <img src="img/docker.png" alt="docker">
+              <p><a href="https://www.docker.com/">docker.com</a></p>
+            </section>
+
+            <section>
+              <h3>Containers in the Cloud</h3>
+            </section>
+
+            <section>
+              <h3>
+                <img class="noborder" src="img/docker-google-cloud.png" alt="">
+                <img class="noborder" width="500px" src="img/docker-digitalocean.png" alt="">
+              </h3>
+            </section>
+
+            <section>
+              <blockquote>
+                For software development, when programmers check their code into git, a Dockerfile could be included in the source code, allowing for quick testing of code on remote servers or as a demonstration tool to let others quickly bring up their own versions of an application without having to worry about specific building instructions or dependency management.
+              </blockquote>
+              <p><small>John Fink. (2014). <a href="http://journal.code4lib.org/articles/9669">Docker: a Software as a Service, Operating System-Level Virtualization Framework.</a></small></p>
+            </section>
+          </section>
+          <section>
+            <section>
+              <h2>The goal</h2>
+              <h3>If you can install Firefox, <br>you can install our software.</h3>
+            </section>
+
+            <section>
+              <h3>Software that can be managed more easily, using less IT resources, by a wider audience of users.</h3>
+            </section>
+
+            <section>
+              <h3>wider &ne; bigger</h3>
+            </section>
+
+            <section>
+              <h3>wider === different</h3>
+            </section>
+          </section>
+          <!-- Goals within Social Media Combine -->
+          <section>
+            <section>
+              <h3>Opening archives with social media</h3>
+            </section>
+            <section>
+              <h3>Community cultural organizations</h3>
+              <img class="stretch" src='img/doc-the-now.png' alt='' />
+            </section>
+            <section>
+              <h3>Lentil</h3>
+              <img class="stretch" src='img/shaw-lentil.png' alt='' />
+            </section>
+            <section>
+              <h3>Social Feed Manager</h3>
+              <img class="stretch" src='img/sfm.png' alt='' />
+            </section>
+            <section>
+              <blockquote>“Along with email, social media will probably provide the main source of information for researchers studying our current time. However, our institution just does not have the resources right now to collect and store the social media of other people or organizations.”</blockquote>
+              <small><a href="http://www.lib.ncsu.edu/social-media-archives-toolkit">NCSU Social Media Archives Toolkit</a> survey of North Carolina Cultural Heritage Organizations</small>
+            </section>
+            <section>
+              <h3>"New Voices and Fresh Perspectives" project</h3>
+              <h4>North Carolina State Library EZ Innovation Grant</h4>
+            </section>
+            <section>
+              <h3><a href="https://github.com/NCSU-Libraries/Social-Media-Combine">Social Media Combine</a></h3>
+              <h4>Vagrant and Docker social media harvesting environment</h4>
+              <h5>github.com/NCSU-Libraries/Social-Media-Combine</h5>
+            </section>
+            <section>
+              <img src="img/combine-webconfig.png" alt="" class="stretch">
+            </section>
+            <section>
+              <h3>Estimated social media harvesting metrics</h3>
+            </section>
+            <section>
+              <h4>Lentil</h4>
+              <h5>Archivists at 80% success</h5>
+              <ol>
+                <li>Time to pilot on a laptop: days</li>
+                <li>Time to export data: automatic</li>
+                <li>Time to update dependencies: 4 hours</li>
+                <li>Time to upgrade application: 60 minutes</li>
+                <li>Time to migrate application: unknown</li>
+                <li>Time to new production deployment: days, if at all</li>
+                <li>Time to reasonable security: unknown</li>
+              </ol>
+            </section>
+            <section>
+              <h4>Social Media Combine (Lentil + Social Feed Manager + Configuration)</h4>
+              <h5>Archivists at 80% success</h5>
+              <ol>
+                <li>Time to pilot on a laptop: 30 minutes</li>
+                <li>Time to export data: automatic (Lentil), variable (Social Feed Manager)</li>
+                <li>Time to update dependencies: 2 minutes</li>
+                <li>Time to upgrade application: 5 minutes</li>
+                <li>Time to migrate application: 20 minutes (under-documented)</li>
+                <li>Time to new production deployment: under development</li>
+                <li>Time to reasonable security: 10 minutes (pilot), under development (production)</li>
+              </ol>
+            </section>
+          </section>
+
+          <!-- Goals within Suma -->
+          <section>
+            <section>
+              <h3>Bringing web analytics to physical space</h3>
+            </section>
+
+            <section>
+              <h3>For Suma, the vast majority of our project support is during the installation process.</h3>
+            </section>
+
+            <section>
+              <h3>(Selected) List of Suma Install Issues</h3>
+              <ul>
+                <li>mod_rewrite disabled</li>
+                <li>cURL missing</li>
+                <li>config errors</li>
+                <li>symlink problems</li>
+                <li>server hardening software</li>
+                <li>db access</li>
+                <li>installation method confusion</li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Estimated Suma metrics</h3>
+            </section>
+
+            <section>
+              <h4>Suma</h4>
+              <h5>Assessment Librarians at 80% success</h5>
+              <ol>
+                <li>Time to pilot on a laptop: days</li>
+                <li>Time to export data: 4 hours</li>
+                <li>Time to update dependencies: 4 hours</li>
+                <li>Time to upgrade application: 60 minutes</li>
+                <li>Time to migrate application: unknown</li>
+                <li>Time to new production deployment: days, if at all</li>
+                <li>Time to reasonable security: unknown</li>
+              </ol>
+            </section>
+            <section>
+              <h4>Suma-Vagrant</h4>
+              <h5>Assessment Librarians at 80% success</h5>
+              <ol>
+                <li>Time to pilot on a laptop: 40 minutes</li>
+                <li>Time to export data: 10 minutes (under-documented)</li>
+                <li>Time to update dependencies: 2 minutes</li>
+                <li>Time to upgrade application: 2 minutes</li>
+                <li>Time to migrate application: 20 minutes</li>
+                <li>Time to new production deployment: under development</li>
+                <li>Time to reasonable security: 10 minutes (pilot), under development (production)</li>
+              </ol>
+            </section>
+
+          </section>
+          <section>
+            <section>
+              <p>github.com/NCSU-Libraries/Suma-Vagrant</p>
+              <video loop data-autoplay class="stretch">
+                <source data-src="video/demo.webm" type="video/webm"></source>
+                <source data-src="video/demo.mp4" type="video/mp4"></source>
+              </video>
+              <p>Thanks! || @cazzerson || jmcasden@ncsu.edu || bddavids@ncsu.edu</p>
+            </section>
+          </section>
+        </div>
+      </div>
+
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+
+      <script>
+
+        // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true }
+        ]
+      });
+      </script>
+
+    </body>
+  </html>

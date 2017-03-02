@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>The modern research skill set</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h2>The modern research skill set:</h2>
+					<h2>Using Vagrant, Ansible, and Python to support researchers</h2>
+					<p>Bret Davidson | Eka Grguric</p>
+					<p>NCSU Libraries</p>
+					<p><a href="https://bretdavidson.github.io/pydata-carolinas-2016">bretdavidson.github.io/pydata-carolinas-2016</a></p>
+				</section>
+
+				<section>
+					<h3>Agenda</h3>
+					<ul>
+						<li>Open science as problem space</li>
+						<li>Open science as modern research practice</li>
+						<li>Open science at NC State</li>
+						<li>Vagrant, Ansible, & Python</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/royal_society.png" alt="Royal Society" class="stretch">
+				</section>
+
+				<section>
+					<h2>Nullius in Verba</h2>
+					<p>"Take nobody's word for it."</p>
+				</section>
+
+				<section>
+					<h2>Only <strong>6 out of 53</strong> &ldquo;landmark" cancer studies could be reproduced.</h2>
+					<small>Nature, <a href="http://www.nature.com/nature/journal/v483/n7391/full/483531a.html">www.nature.com/nature/journal/v483/n7391/full/483531a.html</a></small>
+				</section>
+
+				<section>
+					<h2>How Science Goes Wrong</h2>
+
+					<p>"Too much trusting, not enough verifying."</p>
+
+					<small>Economist, <a href="http://www.economist.com/news/leaders/21588069-scientific-research-has-changed-world-now-it-needs-change-itself-how-science-goes-wrong?fsrc=scn/tw/te/pe/ed/whensciencegoeswrong">www.economist.com/news/leaders/21588069-scientific-research-has-changed-world-now-it-needs-change-itself-how-science-goes-wrong</a></small>
+				</section>
+
+				<section>
+          			<h2>Reproducibility Crisis</h2>
+        		</section>
+
+				<section>
+					<img src="img/nature.jpg" alt="Nature" clas="stretch">
+					<small>Nature, <a href="http:/www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970">www.nature.com/news/1-500-scientists-lift-the-lid-on-reproducibility-1.19970</a></small>
+				</section>
+
+				<section>
+					<h2>What is Open Science?</h2>
+					<ul>
+						<li>Open Access</li>
+						<li>Open Data</li>
+						<li>Open Notebooks</li>
+						<li>Open Source</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Open Science is a return to first principles of scientific practice.</h2>
+				</section>
+
+				<section>
+					<h2>Open Science can improve reproducibility.</h2>
+				</section>
+
+				<section>
+					<h2>Open practices require new skillsets.</h2>
+				</section>
+				<section>
+					<h2>What <b><i>is</i></b> Open Science?</h2>
+				</section>
+				<section>
+					<h3>“Open Science <p class="fragment highlight-green">is an umbrella term encompassing</p> a multitude of assumptions <p class="fragment highlight-green">about the future of knowledge creation and dissemination."</p></h3>
+				</section>
+				<section>
+					<h2>The way that research is <p class="fragment highlight-green">carried out</p></h2>
+				</section>
+				<section>
+					<h2>The way that research is <p class="fragment highlight-green">disseminated</p></h2>
+				</section>
+				<section>
+					<h2>How <p class="fragment highlight-green">digital technologies</p> are affecting <p class="fragment highlight-green">the practice of science</p></h2>
+				</section>
+				<section>
+					<img src="img/open-source-logo.png" alt="Open Source Logo" clas="stretch">
+				</section>
+				<section>
+					<img src="img/open-science-logo.jpg" alt="Open Science Logo" clas="stretch">
+				</section>
+				<section>
+					<img src="img/paul-david-economist.jpeg" alt="Paul David" clas="stretch">
+					<h2>Paul David</h2> </br>
+					<p>Economist / Historian</p>
+					<p>The Knowledge Economy</p>
+				</section>
+				<section>
+					<h2>Science <p class="fragment highlight-green">(as we know it)</p> has always been open</h2>
+				</section>
+				<section>
+					<h2><p class="fragment highlight-green">Increasing fragility</p> of this traditional openness</h2>
+				</section>
+				<section>
+					<h2>A response to a <p class="fragment highlight-green">crisis of the scientific method</p></h2>
+				</section>
+				<section>
+					<h2>Science <span class="fragment highlight-green">=/=</span> Truth</h2>
+				</section>
+				<section>
+					<h2><b>Ask</b> <p>questions of nature</p> <p class="fragment highlight-green">through experimentation</p></h2>
+				</section>
+				<section>
+					<h2><b>Uncover</b> <p class="fragment highlight-green">possible answers</p> to these questions</h2>
+				</section>
+				<section>
+					<h2><b>Share</b> <p class="fragment highlight-green">these answers</p> <p class="fragment fade-out">so that others may question them</p></h2>
+				</section>
+				<section>
+					<h2><b>Five schools of thought</b></h2></br>
+					<p>by Sönke Bartling & Sascha Friesike</p>
+					<p>Editors, <a href="http://book.openingscience.org/">http://book.openingscience.org/</a></p>
+				</section>
+				<section>
+					<h1><b>Infrastructure</b></h1><h2>tech. architecture</h2>
+				</section>
+				<section>
+					<h1><b>Public</b></h3><h2>accessibility of knowledge creation + citizen science</h2>
+				</section>
+				<section>
+					<h1><b>Measurement</b></h1><h2>alt. impact measurement</h2>
+				</section>
+				<section>
+					<h1><b>Democratic</b></h1><h2>access to knowledge</h2>
+				</section>
+				<section>
+					<h1><b>Pragmatic</b></h1><h2>collaborative research</h2>
+				</section>
+				<section>
+				<img src="img/cancer-reproducibilty-article.png" alt="Cancer Reproducibility" class="stretch">
+				</section>
+				<section>
+				<img src="img/austerity-reproducibility-article.png" alt="Austerity Measures" class="stretch">
+				</section>
+				<section>
+				<img src="img/waterCrisis-reproducibility-article.png" alt="Flint Water Crisis" class="stretch">
+				</section>
+				<section>
+				<img src="img/zika-reproducibility-article.png" alt="Zika Reproducibility" class="stretch">
+				</section>
+				<section>
+					<h2>Why Libraries?</h2>
+					<img src="img/the-hunt-library-from-lake-raleigh.jpg" alt="Hunt Library" class="stretch">
+				</section>
+				<section>
+					<h2>Aligns with core library values such as:</h2>
+					<ul>
+						<li>information access
+						<li>peer review
+						<li>community-based knowledge creation
+						<li>the preservation and dissemination of research
+					</ul>
+				</section>
+
+				<section>
+					<h2>Libraries are champions of open source</h2>
+					<img src="img/ncsu-libraries-github.png" alt="NCSU Libraries Github" class="stretch">
+				</section>
+				<section>
+					<h2>Libraries</h2>
+					<h3>are about</h3>
+					<h2>supporting their users</h2>
+				</section>
+				<section>
+					<h2>Academic Libraries</h2>
+					<h3>are about</h3>
+					<h2>supporting research practice</h2>
+				</section>
+				<section>
+					<h2>Ongoing disruption of digital technologies in modern research practice</h2>
+				</section>
+				<section>
+					<h3><b>Hypothetical Open Science Workflow</b></h3>
+					<img src="img/hypothetical-open-science-workflow.png" alt="Open Science Workflow" class="stretch">
+					<p>101 Innovations in Scholarly Communication, <a href="https://innoscholcomm.silk.co/">https://innoscholcomm.silk.co/</a></p>
+				</section>
+				<section>
+					<h2>Policy Shifts</h2>
+					<h2>in support of open</h2>
+					<img src="img/oecd-making-open-science-a-reality.png" alt="OECD Policy Paper" class="stretch">
+				</section>
+
+				<section>
+					<h1>Open Science at NC State</h1>
+				</section>
+
+				<section>
+					<h2>The NCSU Libraries' </br>
+					<b>Open Science Initiative</b></h2>
+				</section>
+				<section>
+					<h2>Goals</h2>
+					<ul>
+						<li>explore open science practice at NCSU</li>
+						<li>better understand researcher needs in context</li>
+					<ul>
+				</section>
+
+				<section>
+					<h2>We took a non-prescriptive </br><b>user-centered</b> approach</h2>
+				</section>
+				<section>
+					<h2>Creating opportunities for <p class="fragment highlight-green">communication</p></h2>
+				</section>
+				<section>
+					<h3><b>Open Science Unconference</b></h3>
+					<img src="img/ncsu-open-science-unconference.png" alt="Open Science Unconference" class="stretch">
+				</section>
+				<section>
+					<h2>Follow-up Informal Interviews</h2>
+				</section>
+				<section>
+					<h2>Modern Research Skills Gap</h2>
+				</section>
+				<section>
+					<h2>Insufficient Incentives</h2>
+				</section>
+				<section>
+					<img src="img/ncsu-sos-logo.png" alt="Summer of Open Science" class="stretch">
+				</section>
+				<section>
+					<img src="img/ncsu-sos-event-series.png" alt="Summer of Open Science Event Series" class="stretch">
+				</section>
+				<section>
+					<h3>Sharing Collective Knowledge</h3>
+				</section>
+				<section>
+					<p><b>Ekatarina [Eka] Grguric (Project Lead)</p></b>
+					<p><b>Lauren Di Monte (Project Manager)</p></b>
+					<p><b>Alison Blaine (Content Development)</p></b>
+					<p><b>Bret Davidson (Technical Lead)</p></b>
+					<p><b>Jennifer Garrett (Community Development)</p></b>
+				</section>
+				<section>
+					<h3><b>Workshops and Events:</b></h3>
+					<ul>
+						<li>Introduction to the Command Line Interface</li>
+						<li>Web Scraping with Python</li>
+						<li>Understand and Build Your Scholarly Identity</li>
+						<li>Scientific Computing with Python & Raspberry Pi</li>
+						<li>Build Your Scholarly Website the Easy Way</li>
+						</br>
+						<li>Meetups</li>
+						<li>End-of-Summer Showcase!</li>
+					</ul>
+				</section>
+				<section>
+					<img src="img/ncsu-sos-python-workshop.jpg" alt="SoS Python Workshop in Makerspace" class="stretch">
+					<p><b>Python and Scientific Computing Workshop:</b></p>
+					<p>40 person waitlist</p>
+				</section>
+				<section>
+					<img src="img/ncsu-sos-python-workshop2.jpg" alt="SoS Python Workshop in Makerspace 2" class="stretch">
+					<p><b>Interdisciplinary Need</b>:</br> over 40 departments across ~16 colleges</p>
+				</section>
+
+				<section>
+					<h3>Tech instruction as gap filler</h3>
+				</section>
+
+				<section>
+					<h3>Web Scraping with Python</h3>
+				</section>
+
+				<section>
+					<h3>Learning Outcomes</h3>
+					<ul>
+						<li>Basic Python data types and structures</li>
+						<li>Python module system</li>
+						<li>Retrieve a web page with Requests</li>
+						<li>Parse content with Beautiful Soup</li>
+						<li>Generate a word cloud with matplotlib</li>
+						<li>Control Structures</li>
+						<li>Exception Handling</li>
+						<li>Working with file system</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Python Course Challenges</h2>
+					<ul>
+						<li>Consistency across user environments</li>
+						<li>Consistency of course materials</li>
+						<li>Time to provision computing environments</li>
+						<li>Ease of collaborating on the creation of course materials</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Many Options</h2>
+					<ul>
+						<li>Custom OS Images</li>
+						<li>Custom Distributions, e.g. Anaconda</li>
+						<li>Interactice Environments, e.g. Jupyter</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Our Approach</h2>
+					<ul>
+						<li>Vagrant: for managing OS</li>
+						<li>Ansible: for provisioning and configuration</li>
+						<li>Course or lab specific packages and resources</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Vagrant</h3>
+					<img src="img/vagrant.png" alt="Vagrant" class="stretch">
+				</section>
+
+				<section>
+					<h2>Create and configure lightweight, <strong>reproducible</strong>, and portable development environments.</h2>
+				</section>
+
+				<section>
+					<h2>Usage</h2>
+					<ul>
+						<li>Easy installation through binary package.</li>
+						<li>Flexible configuration via <strong>text file</strong>.</li>
+						<li>Single command: `vagrant up`</li>
+					</ul>
+				</section>
+
+				<section data-transition="slide-in none">
+					<img src="img/vagrant_file.png" alt="vagrant file" class="stretch">
+				</section>
+
+				<section data-transition="none">
+					<img src="img/vagrant_file_config.png" alt="vagrant file" class="stretch">
+				</section>
+
+				<section data-transition="none">
+					<img src="img/vagrant_file_provisioner.png" alt="vagrant file" class="stretch">
+				</section>
+
+				<section>
+					<h3>Ansible</h3>
+					<p>"Automation engine" for provisioning, configuration management, app deployment, and other IT needs.</p>
+				</section>
+
+				<section>
+					<h3>Provisioning</h3>
+					<p>"To make something available."</p>
+					<p>Installation!</p>
+				</section>
+
+				<section>
+					<h3>Configuration Management</h3>
+					<p>"Establish and maintain <strong>consistency</strong> of an environment."</p>
+				</section>
+
+				<section>
+					<h2>playbook.yml</h2>
+					<img src="img/playbook.png" alt="playbook" class="stretch">
+				</section>
+
+				<section data-transition="slide-in none">
+					<img src="img/role.png" alt="role" class="stretch">
+				</section>
+
+				<section data-transition="none">
+					<img src="img/role-provision.png" alt="role" class="stretch">
+				</section>
+
+				<section data-transition="none">
+					<img src="img/role-configuration.png" alt="role" class="stretch">
+				</section>
+
+				<section>
+					<h3>python-vagrant</h3>
+					<p><a href="https://github.com/NCSU-Libraries/python-vagrant">github.com/NCSU-Libraries/python-vagrant</a></p>
+				</section>
+
+				<section>
+					<p><a href="https://github.com/NCSU-Libraries/python-vagrant">github.com/NCSU-Libraries/python-vagrant</a></p>
+					<img src="img/python-vagrant.png" alt="python-vagrant" class="stretch">
+				</section>
+
+				<section>
+					<h2>Easy!</h2>
+					<ol>
+						<li>Install Vagrant</li>
+						<li>Clone python-vagrant</li>
+						<li>`vagrant up`</li>
+						<li>`vagrant ssh`</li>
+						<li>Execute code!</li>
+					</ol>
+				</section>
+
+				<section>
+					<h2>Future Work</h2>
+				</section>
+
+				<section>
+					<h2>Richer Environments</h2>
+					<ul>
+						<li>Better suited to scientific computing</li>
+						<li>Improved adherance to best practices</li>
+						<li>Optimize relationship between images, provisioner, and tutorials</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Scholarly Backpacks</h2>
+					<ul>
+						<li>General Research Tools</li>
+						<li>Data Science</li>
+						<li>Visualization</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Embedded environments</h2>
+					<ul>
+						<li>Curricular use</li>
+						<li>Laboratory use</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Summary</h2>
+				</section>
+
+				<section>
+					<h2>Emphasis on reproducibility has ignited a shift toward new practices.</h2>
+				</section>
+
+				<section>
+					<h2>With these new practices come new requirements for researchers.</h2>
+				</section>
+
+				<section>
+					<h2>Reproducible and portable computing environments are critical for future success.</h2>
+				</section>
+
+				<section>
+					<h2>Tools like Vagrant and Ansible can help researchers develop the scientific environments they need to be productive.</h2>
+				</section>
+
+				<section>
+					<h2>Thanks!</h3>
+					<p>eka_grguric@ncsu.edu</p>
+					<p>bret_davidson@ncsu.edu</p>
+					<p><a href="https://github.com/NCSU-Libraries/python-vagrant">github.com/NCSU-Libraries/python-vagrant</a></p>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				controls: false,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

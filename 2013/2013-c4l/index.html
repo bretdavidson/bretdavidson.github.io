@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Data-Driven Documents: Visualizing Library Data with D3.js</title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/github.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Data-Driven Documents</h1>
+					<h3>Visualizing Library Data with D3.js</h3>
+					<p><small>Bret Davidson | NCSU Libraries</small></p>
+				</section>
+
+				<section>
+					<img src="img/d3-home.png">
+					<p><a href="http://d3js.org" target="_blank">D3.js</a></p>
+				</section>
+
+				<section>
+					<p><a href="http://go.ncsu.edu/c4l13-d3" target="_blank">go.ncsu.edu/c4l13-d3</a></p>
+				</section>
+
+				<section>
+					<h2>Agenda</h2>
+					<ul>
+						<li>Example</li>
+						<li>Why D3?</li>
+						<li>Data Join</li>
+						<li>API Highlights</li>
+						<li>D3 @ NCSU</li>
+						<li>Resources</li>
+					</ul>
+					<!-- <p>Example</p>
+					<p>Why D3?</p>
+					<p>Data Join</p>
+					<p>API Highlights</p>
+					<p>D3 @ NCSU</p>
+					<p>Resources</p> -->
+				</section>
+
+				<section>
+					<img src="img/trulia.png">
+					<p><a href="http://trends.truliablog.com/vis/tru247" target="_blank">Trulia Trends</a></p>
+				</section>
+
+				<section>
+					<h2>Why D3?</h2>
+					<ul>
+						<li>Web Standards</li>
+						<li>Capability</li>
+						<li>Community</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="img/grumpy-cat-custom.jpg">
+				</section>
+
+				<section>
+					<h2>Why not D3?</h2>
+					<ul>
+						<li>Learning Curve</li>
+						<li>Lower Level</li>
+						<li>Simpler Needs</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Example</h2>
+					<pre><code contenteditable>
+	var dataset = [20, 5, 10, 0, 50];
+
+	d3.select('body')
+	  .selectAll('p') // selection
+	  .data(dataset)  // data binding
+	  .enter()        // create enter selection
+	  .append('p')    // dom manipulation
+	  .style('font-size', '50px') // static property
+	  .text(function (d, i) {     // dynamic property
+	 	return i + ': my value is ' + d;
+	  });
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Output</h2>
+					<img src="img/paragraphs.png">
+				</section>
+
+				<section>
+					<h2>Data Join</h2>
+					<img src="img/data-join.png">
+				</section>
+
+				<section>
+					<h2>Data Join Demo</h2>
+					<a href="http://localhost:8888/d3-experiments/data-join.html" target="_blank">Demo</a>
+				</section>
+
+				<section>
+					<h2>Enter + Update + Exit</h2>
+					<pre><code contenteditable>
+    // Enter
+    rects.enter()
+        .append('rect');
+
+    // Update
+    rects.attr('x', 20)
+        .attr('y', function (d, i) {return 65 * i;})
+        .attr('height', '60' )
+        .attr('width', function(d, i) {return x(d);});
+
+    // Exit
+    rects.exit()
+        .remove();
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Linear Scale</h2>
+					<img src="img/scale.png">
+				</section>
+
+				<section>
+					<h2>Linear Scale</h2>
+					<pre><code contenteditable>
+	var fontSize = d3.scale.linear()
+			.domain([0, d3.max(dataset)])
+			.range([25, 50]);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Array Methods</h2>
+					<pre><code contenteditable>
+	d3.max(array[, accessor]);
+        d3.min(array[, accessor]);
+        d3.extent(array[, accessor]);
+
+        d3.sum(array[, accessor]);
+        d3.mean(array[, accessor]);
+        d3.median(array[, accessor]);
+
+        d3.range([start, ]stop[, step]);
+
+        d3.nest()
+          .key(function(d) { return d.school })
+          .entries(array);
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Other Scales</h2>
+					<ul>
+						<li>power()</li>
+						<li>log()</li>
+						<li>quantize()</li>
+						<li>quantile()</li>
+						<li>threshold()</li>
+						<li>ordinal()</li>
+						<li>time()</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>SVG Generators</h2>
+					<ul>
+						<li>Area</li>
+						<li>Line</li>
+						<li>Chord</li>
+						<li>Diagonal</li>
+						<li>Symbol</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Layouts</h2>
+					<ul>
+						<li>Force</li>
+						<li>Hiearchy</li>
+						<li>Histogram</li>
+						<li>Pack</li>
+						<li>Treemap</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>And More!</h2>
+					<ul>
+						<li>Axes</li>
+						<li>Transitions</li>
+						<li>Color Scales</li>
+						<li>Formatting</li>
+						<li>Geography</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>D3 @ NCSU</h2>
+					<img src="img/suma.png">
+					<p><a href="http://anchovy.lib.ncsu.edu:8888/sumaAnalysis/reports/" target="_blank">Suma</a></p>
+					<!-- <p><a href="http://www.lib.ncsu.edu/dli/projects/spaceassesstool" target="_blank">lib.ncsu.edu/dli/projects/spaceassesstool</a></p> -->
+				</section>
+
+				<section>
+					<h2>Acknowledgments</h2>
+					<p>Mike Bostock</p>
+					<p>Scott Cheng</p>
+					<p>Scott Murray</p>
+				</section>
+
+				<section>
+					<h2>Suma Team</h2>
+					<p>Jason Casden</p>
+					<p>Joyce Chapman</p>
+					<p>Bret Davidson</p>
+					<p>Rob Rucker</p>
+					<p>Rusty Earl</p>
+					<p>Eric McEachern</p>
+					<a href="http://www.lib.ncsu.edu/dli/projects/spaceassesstool" target="_blank">lib.ncsu.edu/dli/projects/spaceassesstool</a>
+				</section>
+
+				<section>
+					<h1>Thank You!</h1>
+					<p><a href="http://go.ncsu.edu/c4l13-d3" target="_blank">go.ncsu.edu/c4l13-d3</a></p>
+					<p>bret_davidson@ncsu.edu</p>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: false,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

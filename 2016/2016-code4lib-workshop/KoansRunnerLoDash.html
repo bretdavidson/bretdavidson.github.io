@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript Koans</title>
+  <link rel="stylesheet" href="lib/jasmine/jskoans-jasmine.css">
+  <link rel="stylesheet" href="lib/leaflet/leaflet.css">
+
+  <script src="lib/jasmine/jasmine.js"></script>
+  <script src="lib/jasmine/jasmine-html.js"></script>
+  <script src="lib/jasmine/jskoans-jasmine-html.js"></script>
+
+  <script src="lib/lodash.min.js"></script>
+  <script src="lib/leaflet/leaflet.js"></script>
+
+  <script src="lib/FILL_ME_IN.js"></script>
+  <script src="lib/beer_data_1.js"></script>
+  <script src="lib/beer_data_2.js"></script>
+  <script src="lib/beer_data_3.js"></script>
+  <script src="lib/beer_data_4.js"></script>
+  <script src="lib/beer_data_5.js"></script>
+  <script src="lib/clean_beer_data.js"></script>
+  <script src="lib/top_five.js"></script>
+
+  <script src="lib/draw_map.js"></script>
+
+  <script src="koans/lodash/AboutCollectionMethods.js"></script>
+  <script src="koans/lodash/AboutArrayMethods.js"></script>
+  <script src="koans/lodash/AboutObjectMethods.js"></script>
+  <script src="koans/lodash/AboutStringMethods.js"></script>
+  <script src="koans/lodash/AboutApplyingWhatWeHaveLearnt.js"></script>
+
+  <!-- <script type="text/javascript" src="koans/lodash/solutions/AboutCollectionMethodsSolutions.js"></script>
+  <script type="text/javascript" src="koans/lodash/solutions/AboutArrayMethodsSolutions.js"></script>
+  <script type="text/javascript" src="koans/lodash/solutions/AboutObjectMethodsSolutions.js"></script>
+  <script type="text/javascript" src="koans/lodash/solutions/AboutStringMethodsSolutions.js"></script>
+  <script type="text/javascript" src="koans/lodash/solutions/AboutApplyingWhatWeHaveLearntSolutions.js"></script> -->
+
+  <style>
+    #map {
+      height:700px;
+      width: 100%;
+      margin-bottom:50px;
+    }
+  </style>
+</head>
+<body>
+
+<script type="text/javascript">
+  jasmine.getEnv().addReporter(new JsKoansReporter());
+  jasmine.getEnv().execute();
+</script>
+<div id="map"></div>
+</body>
+</html>

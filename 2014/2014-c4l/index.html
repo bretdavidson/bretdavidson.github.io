@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Towards Pasta Code Nirvana: Using JavaScript MVC to Fill Your Programming Ravioli</title>
+
+		<meta name="author" content="Bret Davidson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/simple.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<style>
+			.reveal section img {
+				box-shadow: none;
+			}
+		</style>
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<!-- Intro -->
+				<section>
+					<h2>Towards Pasta Code Nirvana</h2>
+            <h4>Using JavaScript MV* to Fill Your Programming Ravioli</h4>
+					<p>
+						<small>Bret Davidson | NCSU Libraries</small>
+					</p>
+				</section>
+
+				<section>
+					<h1>Agenda</h1>
+          <h2><a href="http://go.ncsu.edu/js-mvc">go.ncsu.edu/js-mvc</a></h2>
+				</section>
+
+				<section>
+					<h1>Off the Agenda</h1>
+				</section>
+
+				<!-- Pasta Code -->
+				<section>
+					<h1>Pasta What?</h1>
+				</section>
+
+				<section>
+					<h1>Metaphors for describing software architectures.</h1>
+				</section>
+
+				<section>
+					<img src="img/gourmet_spaghetti.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/boyardee_spaghetti.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/boyardee_spaghetti_2.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/gourmet_lasagna.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/boyardee_lasagna.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/gourmet_ravioli.jpg" alt="">
+				</section>
+
+				<section>
+					<img src="img/boyardee_ravioli.jpg" alt="">
+				</section>
+
+				<section>
+					<h1>Modular</h1>
+					<h1>Reusable</h1>
+					<h1>Testable</h1>
+				</section>
+
+				<section>
+					<img src="img/tao.png" alt="">
+				</section>
+
+				<!-- Why JS? -->
+				<section>
+					<h1>Why JavaScript?</h1>
+				</section>
+
+				<section>
+					<h2>Brief History of JavaScript</h2>
+					<ul>
+						<li>Created by Brendan Eich in 1995</li>
+						<li>IE support in 1996</li>
+						<li>Standardized by ECMA in 1997</li>
+						<li>JJG coins AJAX in 2005</li>
+						<li>V8 JS engine in 2008</li>
+						<li>JS MVC circa 2010</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>JS is everywhere</h1>
+				</section>
+
+				<section>
+					<h1>JS is fast<span class="fragment">(er)</span></h1>
+				</section>
+
+				<section>
+					<h1>JS is the </h1>
+					<h1>lingua franca</h1>
+				</section>
+
+				<!-- What is MVC? -->
+				<section>
+					<h1>What is JS MV*?</h1>
+          <br>
+          <h2 class="fragment">MVC - MVP - MVVM</h2>
+				</section>
+
+				<section>
+					<h2>Approximate Architecture</h2>
+					<ul>
+						<li class="fragment">Models</li>
+						<li class="fragment">Views</li>
+						<li class="fragment">Controllers</li>
+						<li class="fragment"><strong>Data Binding</strong></li>
+					</ul>
+				</section>
+
+				<section ng-app>
+					<span ng-controller="InputCtrl">
+						<div style="width:50%; height: 500px; float:left">
+							<div style="width:100%">
+								<input type="text" ng-model="data" style="padding: 20px; line-height: 30px; font-size: 28px; float:left;">
+							</div>
+
+							<div style="background: yellow; float:left; margin-top: 30px;" ng-click="updateMessage('Hello Raleigh!')"><h3 style="float:left;">Change MSG</h3></div>
+						</div>
+
+						<div style="width:50%; height: 500px; float:left; background: green">
+							<h3>{{data}}</h3>
+						</div>
+					</span>
+
+					<script>
+						function InputCtrl ($scope) {
+							$scope.data = 'Hello Code4Lib!';
+
+							$scope.updateMessage = function (msg) {
+								$scope.data = msg;
+							};
+						}
+					</script>
+				</section>
+
+        <section>
+          <img src="img/markup.png" alt="">
+        </section>
+
+        <section>
+          <img src="img/controller.png" alt="">
+        </section>
+
+				<!-- Benefits -->
+				<section>
+					<h2>MV* Benefits</h2>
+					<ul>
+						<li>Abstracts DOM interaction</li>
+						<li>Encourages code reuse</li>
+						<li>Enforces modularity</li>
+						<li>Improves testability</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Architecture that supports best practices.</h1>
+				</section>
+
+				<section>
+					<h2>When to use?</h2>
+					<ul>
+						<li>JS heavy applications</li>
+						<li>Interactive applications</li>
+						<li>Distributed applications</li>
+						<li>Modern devices/browsers</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Who is using MV*?</h2>
+					<ul>
+						<li>USA Today</li>
+						<li>Rdio</li>
+						<li>Hulu</li>
+						<li>Discourse</li>
+						<li>Youtube on PS3</li>
+						<li>General Motors</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>When to avoid?</h2>
+					<ul>
+						<li>Need to support no-JS users</li>
+						<li>App is document driven (blog)</li>
+						<li>Older devices/browsers</li>
+					</ul>
+				</section>
+
+				<!-- Leading Frameworks -->
+				<section>
+					<h2>Frameworks</h2>
+					<ul>
+						<li>Angular</li>
+						<li>Ember</li>
+						<li>Backbone</li>
+						<li>Many Others</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>MV* Throwdown</h2>
+					<a href="http://todomvc.com/">http://todomvc.com/</a>
+				</section>
+
+				<!-- Case Study -->
+				<section>
+					<h2>My Experiences</h2>
+				</section>
+
+				<section>
+					<h2>Suma</h2>
+					<a href="https://github.com/cazzerson/Suma">github.com/cazzerson/Suma</a>
+				</section>
+
+				<section>
+					<img src="img/tao.png" alt="">
+				</section>
+
+				<section>
+					<h2>Community</h2>
+				</section>
+
+				<section>
+					<h2>Loose Coupling</h2>
+				</section>
+
+				<section>
+					<h2>Cognitive Load</h2>
+				</section>
+
+				<section>
+					<img src="img/ravioli_smile_2.jpg" alt="">
+				</section>
+
+				<section>
+					<h1>JS MV* helps solve problems.</h1>
+				</section>
+
+				<!-- Closing -->
+				<section>
+					<img src="img/tao.png" alt="">
+				</section>
+
+				<section>
+					<h2>Thanks!</h2>
+					<a href="http://go.ncsu.edu/js-mvc">go.ncsu.edu/js-mvc</a>
+					<p>bret_davidson@ncsu.edu</p>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="js/angular.min.js"></script>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: false,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
