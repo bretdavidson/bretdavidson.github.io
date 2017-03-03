@@ -46,7 +46,7 @@
 [Slides](2013/2013-lita/)
 
 ## 2013 TRLN
-[Slides](2013/2013-trln/)
+[Slides](2013/2013-trln/trln_2013.pdf)
 
 ## 2013 ACRL
 [Slides](2013/2013-acrl/)
