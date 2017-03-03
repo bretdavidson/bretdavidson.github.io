@@ -1,15 +1,27 @@
 # Bret Davidson Presentations
 
 ## 2017 ACRL
+### The Scholar's Backpack: Using virtual environments to support modern research practice.
+### Co-Presenters
+* Eka Grguric
+
 [Slides](2017/2017-acrl/)
 
-## 2017 LAS
-[Slides](2017/2017-las/)
-
 ## 2016 CNI
+### The Scholar's Backpack: Using virtual environments to support modern research practice.
+### Co-Presenters
+* Eka Grguric
+
 [Slides](2016/2016-cni/)
 
 ## 2016 DLF
+### Open science: How libraries can support modern research practice
+### Supporting the modern research skillset: The summer of open science
+### Co-Presenters
+* Alison Blaine
+* Lauren Di Monte
+* Jennifer Garret
+* Eka Grguric
 [Slides](2016/2016-dlf/)
 
 ## 2016 PyData Carolinas
