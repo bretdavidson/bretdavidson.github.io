@@ -20,7 +20,7 @@
 #### Co-Presenters
 * Alison Blaine
 * Lauren Di Monte
-* Jennifer Garret
+* Jennifer Garrett
 * Eka Grguric
 
 [Slides](2016/2016-dlf/)
