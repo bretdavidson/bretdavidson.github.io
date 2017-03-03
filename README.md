@@ -2,35 +2,48 @@
 
 ## 2017 ACRL
 ### The Scholar's Backpack: Using virtual environments to support modern research practice.
-### Co-Presenters
+#### Co-Presenters
 * Eka Grguric
 
 [Slides](2017/2017-acrl/)
 
 ## 2016 CNI
 ### The Scholar's Backpack: Using virtual environments to support modern research practice.
-### Co-Presenters
+#### Co-Presenters
 * Eka Grguric
 
 [Slides](2016/2016-cni/)
 
 ## 2016 DLF
-### Open science: How libraries can support modern research practice
+### Open science: How libraries can support modern research practice &
 ### Supporting the modern research skillset: The summer of open science
-### Co-Presenters
+#### Co-Presenters
 * Alison Blaine
 * Lauren Di Monte
 * Jennifer Garret
 * Eka Grguric
+
 [Slides](2016/2016-dlf/)
 
 ## 2016 PyData Carolinas
+### The modern research skill set: Using Vagrant, Ansible, and Python to support researchers.
+#### Co-Presenters
+* Eka Grguric
+
 [Slides](2016/2016-pydata-carolinas/)
 
 ## 2016 Data Science and Visualization Institute
+### Git and GitHub Overview
+#### Co-Presenters
+* Heidi Tebbe
+
 [Slides](2016/2016-dvil/)
 
 ## 2016 Code4Lib Workshop
+### lodash.js API Tour
+#### Co-Presenters
+* Kevin Beswick
+
 [Slides](2016/2016-code4lib-workshop/)
 
 ## 2015 LITA
