@@ -55,10 +55,10 @@
 [Slides](2013/2013-c4l/)
 
 ## 2012 TRLN
-[Slides](2012/2012-trln/)
+[Slides](2012/2012-trln/trln_2012.pdf)
 
 ## 2012 HHL6
-[Slides](2012/2012-hhl6/)
+[Slides](2012/2012-hhl6/hhl6.pdf)
 
 ## 2011 LITA
-[Slides](2011/2011-lita/)
+[Slides](2011/2011-lita/lita_2011.pdf)
