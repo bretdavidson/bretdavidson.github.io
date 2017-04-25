@@ -1,12 +1,12 @@
 # Bret Davidson Presentations
 
 ## 2017 DSVIL
-### The Scholar's Backpack: Using virtual environments to support scientific computing.
+### Exploring reproducible scientific computing using Vagrant, Ansible, and Anaconda
 
 [Slides](2017/2017-dsvil/)
 
 ## 2017 Code4Lib Southeast
-### The Scholar's Backpack: Using virtual environments to support modern research practice.
+### Supporting open science through reproducible computing.
 #### Co-Presenters
 * Eka Grguric
 
